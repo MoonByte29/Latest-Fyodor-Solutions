@@ -51,7 +51,7 @@ const PartnerSection = () => {
   const duplicatedPartnersRow2 = [...partners, ...partners];
 
   return (
-    <div className="w-full py-20 overflow-hidden">
+    <div className="w-full py-20 ">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section heading */}
         <div className="max-w-6xl mx-auto">
@@ -105,7 +105,7 @@ const PartnerSection = () => {
 
 
         {/* Desktop Layout: Two Rows with Opposite Animations */}
-        <div className="hidden md:block relative overflow-hidden gap-0">
+        <div className="hidden md:block relative gap-0">
           {/* Top Row: Left to Right */}
           <div className="relative overflow-hidden">
             {/* Edge gradients for fade effect */}

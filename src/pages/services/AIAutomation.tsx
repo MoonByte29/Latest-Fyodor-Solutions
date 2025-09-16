@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 
 import GlassIcons from "../../components/GlassIcons";
+import HeaderSection from "../../components/HeaderSection";
 
 const AIAutomation = () => {
   const services = [
@@ -119,63 +120,16 @@ const AIAutomation = () => {
   ];
 
   return (
-    <section className="relative max-w-7xl mx-auto flex flex-col items-center justify-center min-h-screen text-white overflow-hidden">
-    
-
+    <section className="relative max-w-7xl mx-auto flex flex-col items-center justify-center min-h-screen text-white overflow">
       {/* Hero Section */}
-      <div className="flex flex-col items-center justify-center min-h-screen text-white py-20 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-8 inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-gradient-to-r from-blue-500/10 to-violet-500/10 backdrop-blur-sm"
-        >
-          <span className="h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
-          <span className="text-white/80 text-sm font-medium tracking-wide uppercase">
-            AI & Automation
-          </span>
-        </motion.div>
-
-        {/* Hero Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center max-w-5xl px-6 mb-12"
-        >
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-            <span className="text-white">Intelligent </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-blue-400 to-violet-400">
-              Automation
-            </span>
-            <br />
-            <span className="text-slate-300 text-3xl md:text-4xl font-medium">
-              for the Modern Enterprise
-            </span>
-          </h1>
-          <p className="text-slate-300 text-xl md:text-2xl max-w-3xl mx-auto mb-10">
-            Fyodor empowers businesses with AI and intelligent automation
+      <div className="flex flex-col items-center justify-center text-white py-20 px-4">
+        <HeaderSection
+          title="Intelligent Automation"
+          highlight="for the Modern Enterprise"
+          subtitle="Fyodor empowers businesses with AI and intelligent automation
             solutions that drive innovation, efficiency, and competitive
-            advantage.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-            >
-              <button className="px-6 py-3 rounded-full bg-white text-black font-medium flex items-center gap-2 hover:bg-neutral-200 transition text-sm sm:text-base">
-                Schedule a Consultation <ArrowRight size={18} />
-              </button>
-            </motion.div>
-          </div>
-        </motion.div>
-
+            advantage."
+        />
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

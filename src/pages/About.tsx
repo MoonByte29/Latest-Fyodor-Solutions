@@ -8,14 +8,17 @@ import ValuesSection from "../sections/about/ValuesSection";
 import TeamSection from "../sections/about/TeamSection";
 import FaqSection from "../sections/contact/FaqSection";
 import ContactForm from "../sections/contact/ContactForm";
-import AboutHero from "../sections/about/AboutHero";
+import HeaderSection from "../components/HeaderSection";
 
 const About = () => {
   return (
     <>
       <div className="relative">
-
-        <AboutHero />
+        <HeaderSection
+          title="Shaping the Future with"
+          highlight="Innovation & Vision"
+          subtitle="At Fyodor, we believe in empowering businesses with digital transformation, innovative solutions, and a vision that drives global success."
+        />
 
         <AboutSection />
         <PartnerSection />

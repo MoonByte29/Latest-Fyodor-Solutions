@@ -10,13 +10,14 @@ import OpportunityDiscovery from "./pages/services/OpportunityDiscovery";
 import CybersecurityCompliance from "./pages/services/CybersecurityCompliance";
 import ManagedDelivery from "./pages/services/ManagedDelivery";
 import Banking from "./pages/industry/Banking";
+import Automotive from "./pages/industry/Automotive";
+import Insurance from "./pages/industry/Insurance";
+import Finance from "./pages/industry/Finance";
 
 function App() {
   return (
     <>
-      <div className="min-h-screen w-full relative bg-black text-white overflow-x-hidden">
-        {/* Background Gradient */}
-        {/* Indigo Cosmos Background with Top Glow */}
+      <div className="min-h-screen w-full bg-black text-white relative">
         <div
           className="fixed inset-0 z-0"
           style={{
@@ -40,7 +41,11 @@ function App() {
                 element={<CybersecurityCompliance />}
               />
               <Route path="/managed-delivery" element={<ManagedDelivery />} />
-              <Route path="/banking" element={<Banking/>} />
+              <Route path="/banking" element={<Banking />} />
+              <Route path="/insurance" element={<Insurance />} />
+              <Route path="/finance" element={<Finance />} />
+
+              <Route path="/automotive" element={<Automotive />} />
 
               <Route path="/contact" element={<Contact />} />
               {/* Fallback 404 */}

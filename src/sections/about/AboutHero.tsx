@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const AboutHero: React.FC = () => {
   return (
-    <section className="relative flex items-center justify-center min-h-[70vh] md:min-h-[80vh] ">
+    <section className="relative flex items-center justify-center max-h-[60vh] py-20 ">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[150px]" />
@@ -12,19 +12,6 @@ const AboutHero: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-5xl px-6 text-center">
-        {/* Eyebrow / Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-8 inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm"
-        >
-          <span className="h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
-          <span className="text-white/80 text-sm font-medium tracking-wide uppercase">
-            About
-          </span>
-        </motion.div>
 
         {/* Heading */}
         <motion.h1
