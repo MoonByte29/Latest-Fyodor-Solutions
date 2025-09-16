@@ -4,45 +4,63 @@ const PartnerSection = () => {
   const partners = [
     {
       id: 1,
-      name: "Matin Browser",
-      logo: "https://via.placeholder.com/150x80/1e293b/ffffff?text=Matin+Browser",
-      website: "#"
+      name: "Microsoft",
+      logo: "https://images.pexels.com/photos/4439901/pexels-photo-4439901.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://microsoft.com"
     },
     {
       id: 2,
-      name: "Stellium",
-      logo: "https://via.placeholder.com/150x80/1e293b/ffffff?text=Stellium",
-      website: "#"
+      name: "Google Cloud",
+      logo: "https://images.pexels.com/photos/9816335/pexels-photo-9816335.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://cloud.google.com"
     },
     {
       id: 3,
-      name: "GGG",
-      logo: "https://via.placeholder.com/150x80/1e293b/ffffff?text=GGG",
-      website: "#"
+      name: "Amazon AWS",
+      logo: "https://images.pexels.com/photos/6214476/pexels-photo-6214476.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://aws.amazon.com"
     },
     {
       id: 4,
-      name: "ADIENT",
-      logo: "https://via.placeholder.com/150x80/1e293b/ffffff?text=ADIENT",
-      website: "#"
+      name: "Salesforce",
+      logo: "https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://salesforce.com"
     },
     {
       id: 5,
-      name: "MB",
-      logo: "https://via.placeholder.com/150x80/1e293b/ffffff?text=MB",
-      website: "#"
+      name: "Meta",
+      logo: "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://meta.com"
     },
     {
       id: 6,
-      name: "Martin Browser",
-      logo: "https://via.placeholder.com/150x80/1e293b/ffffff?text=Martin+Browser",
-      website: "#"
+      name: "Netflix",
+      logo: "https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://netflix.com"
     },
     {
       id: 7,
-      name: "CooperStandard",
-      logo: "https://via.placeholder.com/150x80/1e293b/ffffff?text=CooperStandard",
-      website: "#"
+      name: "Adobe",
+      logo: "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://adobe.com"
+    },
+    {
+      id: 8,
+      name: "Spotify",
+      logo: "https://images.pexels.com/photos/4790267/pexels-photo-4790267.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://spotify.com"
+    },
+    {
+      id: 9,
+      name: "Slack",
+      logo: "https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://slack.com"
+    },
+    {
+      id: 10,
+      name: "Shopify",
+      logo: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop&crop=center",
+      website: "https://shopify.com"
     }
   ];
   
@@ -51,7 +69,7 @@ const PartnerSection = () => {
   const duplicatedPartnersRow2 = [...partners, ...partners];
 
   return (
-    <div className="w-full py-20 ">
+    <div className="min-h-screen w-full py-20 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section heading */}
         <div className="max-w-6xl mx-auto">
@@ -60,13 +78,13 @@ const PartnerSection = () => {
             <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
               <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
               <span className="text-white text-sm font-medium tracking-wider">
-                PARTNERS
+                TRUSTED PARTNERS
               </span>
             </div>
 
             {/* Title */}
             <h2 className="text-center font-bold text-white text-2xl md:text-4xl lg:text-5xl leading-tight mb-6">
-              Partnerships That Power{" "}
+              Industry Leaders Who Trust{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
                 Fyodor
               </span>
@@ -74,7 +92,7 @@ const PartnerSection = () => {
 
             {/* Subtitle */}
             <p className="text-center text-slate-300 text-lg max-w-2xl mx-auto">
-              Driving innovation together through meaningful partnerships
+              Powering innovation alongside the world's most forward-thinking companies
             </p>
           </div>
         </div>
@@ -91,18 +109,16 @@ const PartnerSection = () => {
                 }
               >
                 <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm">
-                  <img
-                    src={partner.logo}
-                    alt={`${partner.name} logo`}
-                    className="h-10 w-auto mx-auto filter brightness-0 invert opacity-80 group-hover:opacity-100 group-hover:brightness-125 transition-all duration-300"
-                    loading="lazy"
-                  />
+                  <div className="h-10 flex items-center justify-center">
+                    <span className="text-white/80 font-semibold text-sm group-hover:text-white transition-colors duration-300">
+                      {partner.name}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
 
         {/* Desktop Layout: Two Rows with Opposite Animations */}
         <div className="hidden md:block relative gap-0">
@@ -121,13 +137,12 @@ const PartnerSection = () => {
                     partner.website && window.open(partner.website, "_blank")
                   }
                 >
-                  <div className="bg-slate-800/50 border border-blue-700/50 rounded-xl p-4 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-blue-800 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm">
-                    <img
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      className="h-12 w-auto mx-auto filter brightness-0 invert opacity-80 group-hover:opacity-100 group-hover:brightness-125 transition-all duration-300"
-                      loading="lazy"
-                    />
+                  <div className="bg-slate-800/50 border border-blue-700/50 rounded-xl p-6 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm min-w-[180px]">
+                    <div className="h-12 flex items-center justify-center">
+                      <span className="text-white/80 font-semibold text-base group-hover:text-white group-hover:text-blue-300 transition-all duration-300">
+                        {partner.name}
+                      </span>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -149,13 +164,12 @@ const PartnerSection = () => {
                     partner.website && window.open(partner.website, "_blank")
                   }
                 >
-                  <div className="bg-slate-800/50 border border-blue-700/50 rounded-xl p-4 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-blue-800 hover:shadow-lg hover:shadow-violet-500/10 backdrop-blur-sm">
-                    <img
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      className="h-12 w-auto mx-auto filter brightness-0 invert opacity-80 group-hover:opacity-100 group-hover:brightness-125 transition-all duration-300"
-                      loading="lazy"
-                    />
+                  <div className="bg-slate-800/50 border border-blue-700/50 rounded-xl p-6 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-violet-400 hover:shadow-lg hover:shadow-violet-500/10 backdrop-blur-sm min-w-[180px]">
+                    <div className="h-12 flex items-center justify-center">
+                      <span className="text-white/80 font-semibold text-base group-hover:text-white group-hover:text-violet-300 transition-all duration-300">
+                        {partner.name}
+                      </span>
+                    </div>
                   </div>
                 </div>
               ))}
