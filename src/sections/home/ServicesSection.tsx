@@ -54,7 +54,7 @@ const ServicesSection: React.FC = () => {
 
   return (
     <section id="services" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-6">
+      <div className="container md:mx-20 sm:mx-5 px-6">
         <div className="text-center mb-12">
           <h2 ref={titleRef} className="text-3xl md:text-4xl font-bold text-white">
             Our Offerings

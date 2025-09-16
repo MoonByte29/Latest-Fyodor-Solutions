@@ -53,7 +53,7 @@ const TestimonialCarousel: React.FC<Props> = ({
   if (testimonials.length === 0) return null;
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased lg:px-12 md:max-w-4xl md:px-8">
+    <div className="md:mx-20 sm:mx-5 max-w-sm px-4 py-20 font-sans antialiased lg:px-12 md:max-w-4xl md:px-8">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         {/* Left Side - Image stack */}
         <div>
@@ -189,9 +189,9 @@ export default function Testimonial() {
 
   return (
     <div className="py-20 px-5 min-h-screen ">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl md:mx-20 sm:mx-5">
         {/* Section Header */}
-        <div className="flex flex-col items-start mb-10">
+        <div className="flex flex-col md:items-start sm:items-center mb-10">
           <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
             <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
             <span className="text-blue-200 text-sm font-medium tracking-wider">

@@ -144,7 +144,7 @@ export default function Header() {
                       mobileOpenDropdown === item.name ? null : item.name
                     );
                   }}
-                  className="text-white text-sm hover:text-blue-400 flex justify-center items-center gap-1 mx-auto"
+                  className="text-white text-sm hover:text-blue-400 flex justify-center items-center gap-1 md:mx-20 sm:mx-5"
                 >
                   {item.name} <ChevronDown size={14} />
                 </button>

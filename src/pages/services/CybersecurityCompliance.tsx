@@ -93,7 +93,7 @@ const CybersecurityCompliance = () => {
 
   return (
     <>
-      <section className="relative max-w-6xl mx-auto flex flex-col items-center justify-center min-h-screen text-white">
+      <section className="relative max-w-6xl md:mx-20 sm:mx-5 flex flex-col items-center justify-center min-h-screen text-white">
         {/* Hero */}
         <div className="flex flex-col items-center justify-center min-h-screen text-white py-20 px-4">
           <motion.div
@@ -124,7 +124,7 @@ const CybersecurityCompliance = () => {
               </span>
             </h1>
 
-            <p className="text-slate-300 text-xl md:text-2xl max-w-3xl mx-auto mb-10">
+            <p className="text-slate-300 text-xl md:text-2xl max-w-3xl md:mx-20 sm:mx-5 mb-10">
               AI, automation, and digital systems introduce new layers of
               complexity and risk — from data pipelines to cloud interfaces.
               Fyodor embeds security and compliance at the core of every
@@ -135,8 +135,8 @@ const CybersecurityCompliance = () => {
 
         {/* What We Deliver */}
         <div id="services" className="py-20 px-4 w-full">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col items-start mb-16">
+          <div className="max-w-7xl md:mx-20 sm:mx-5">
+            <div className="flex flex-col md:items-start sm:items-center mb-16">
               <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
                 <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
                 <span className="text-white text-sm font-medium tracking-wider">
@@ -192,7 +192,7 @@ const CybersecurityCompliance = () => {
 
         {/* Why Choose Us */}
         <div className="relative py-20 px-4 w-full">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl md:mx-20 sm:mx-5">
             <div className="text-center mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -229,7 +229,7 @@ const CybersecurityCompliance = () => {
                   whileHover={{ y: -5 }}
                   className="group bg-gradient-to-b from-slate-800/40 to-slate-900/40 rounded-2xl p-8 border border-slate-700/30 hover:border-blue-400/40 transition-all duration-500 backdrop-blur-sm relative overflow-hidden h-full"
                 >
-                  <div className="flex items-start gap-5 relative z-10 h-full">
+                  <div className="flex md:items-start sm:items-center gap-5 relative z-10 h-full">
                     <div className="flex-shrink-0">
                       <div className={`p-3 rounded-xl bg-white/10`}>
                         <adv.icon size={24} className={`text-blue-400`} />
@@ -258,7 +258,7 @@ const CybersecurityCompliance = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto bg-gradient-to-br from-blue-500/10 via-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden"
+            className="max-w-5xl md:mx-20 sm:mx-5 bg-gradient-to-br from-blue-500/10 via-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden"
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to secure your digital & AI systems with{" "}
@@ -267,7 +267,7 @@ const CybersecurityCompliance = () => {
               </span>
             </h3>
 
-            <p className="text-slate-300 text-xl mb-8 max-w-2xl mx-auto">
+            <p className="text-slate-300 text-xl mb-8 max-w-2xl md:mx-20 sm:mx-5">
               Let’s discuss how Fyodor can embed security and compliance into
               your workflows — resilient, secure, and audit-ready.
             </p>

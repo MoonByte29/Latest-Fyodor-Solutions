@@ -30,7 +30,7 @@ const teamMembers = [
 const TeamSection = () => {
   return (
     <section className="min-h-screen py-16 px-6 relative overflow-hidden mb-16">
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl md:mx-20 sm:mx-5 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col items-center mb-16 text-center">
           <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-6">

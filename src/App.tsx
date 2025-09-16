@@ -17,7 +17,7 @@ import Finance from "./pages/industry/Finance";
 function App() {
   return (
     <>
-      <div className="min-h-screen w-full bg-black text-white relative">
+      <div className="min-h-screen w-full bg-black text-white relative overflow-x-hidden">
         <div
           className="fixed inset-0 z-0"
           style={{

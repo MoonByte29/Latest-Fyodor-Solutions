@@ -13,7 +13,7 @@ const ContainerScrollTitle: React.FC<ContainerScrollTitleProps> = ({
   return (
     <div
       style={{ transform: `translateY(${translate}px)` }}
-      className="mx-auto max-w-5xl text-center"
+      className="md:mx-20 sm:mx-5 max-w-5xl text-center"
     >
       {children}
     </div>
@@ -37,7 +37,7 @@ const ContainerScrollCard: React.FC<ContainerScrollCardProps> = ({
         boxShadow:
           "0 0 #0000004d, 0 6px 14px #0000003a, 0 25px 25px #0000002d, 0 60px 35px #00000020",
       }}
-      className="mx-auto -mt-12 w-full max-w-5xl rounded-[30px] border border-indigo-400/40 bg-slate-900 p-2 shadow-xl md:p-6"
+      className="md:mx-20 sm:mx-5 -mt-12 w-full max-w-5xl rounded-[30px] border border-indigo-400/40 bg-slate-900 p-2 shadow-xl md:p-6"
     >
       <div className="size-full overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 md:p-6">
         {children}
@@ -89,7 +89,7 @@ const AboutFounder: React.FC = () => {
               </h2>
 
               {/* Subtext */}
-              <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-slate-300 max-w-2xl md:mx-20 sm:mx-5">
                 Driven by vision, passion, and innovation, our founder built
                 Fyodor to empower businesses worldwide.
               </p>
@@ -102,7 +102,7 @@ const AboutFounder: React.FC = () => {
             {/* Founder Content */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-12">
               {/* Left: Image + Name */}
-              <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2">
+              <div className="flex flex-col items-center md:md:items-start sm:items-center text-center md:text-left md:w-1/2">
                 <div className="relative">
                   <div className="absolute -top-6 -left-6 w-72 h-72 bg-indigo-500 rounded-full -z-10 blur-lg opacity-50"></div>
                   <img
