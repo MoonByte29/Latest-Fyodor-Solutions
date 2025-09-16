@@ -53,11 +53,11 @@ const TestimonialCarousel: React.FC<Props> = ({
   if (testimonials.length === 0) return null;
 
   return (
-    <div className="md:mx-20 sm:mx-5 max-w-sm px-4 py-20 font-sans antialiased lg:px-12 md:max-w-4xl md:px-8">
-      <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20">
         {/* Left Side - Image stack */}
-        <div>
-          <div className="relative h-80 w-full">
+        <div className="order-2 lg:order-1">
+          <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 w-full max-w-md mx-auto lg:max-w-none">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -94,7 +94,7 @@ const TestimonialCarousel: React.FC<Props> = ({
                     src={testimonial.image}
                     alt={testimonial.name}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                    className="h-full w-full rounded-2xl sm:rounded-3xl object-cover object-center shadow-xl"
                   />
                 </motion.div>
               ))}
@@ -103,7 +103,7 @@ const TestimonialCarousel: React.FC<Props> = ({
         </div>
 
         {/* Right Side - Content */}
-        <div className="flex flex-col justify-between py-4">
+        <div className="order-1 lg:order-2 flex flex-col justify-between py-4 sm:py-6 lg:py-8 text-center lg:text-left">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -111,14 +111,18 @@ const TestimonialCarousel: React.FC<Props> = ({
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="space-y-4 sm:space-y-6"
             >
-              <h3 className="text-2xl font-bold text-white">
-                {testimonials[active].name}
-              </h3>
-              <p className="text-sm text-blue-300">
-                {testimonials[active].designation}
-              </p>
-              <motion.p className="mt-8 text-lg text-gray-300">
+              <div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2">
+                  {testimonials[active].name}
+                </h3>
+                <p className="text-xs sm:text-sm lg:text-base text-blue-300">
+                  {testimonials[active].designation}
+                </p>
+              </div>
+              
+              <motion.p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 {activeTestimonialQuote.map((word, index) => (
                   <motion.span
                     key={index}
@@ -139,19 +143,37 @@ const TestimonialCarousel: React.FC<Props> = ({
           </AnimatePresence>
 
           {/* Controls */}
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-3 sm:gap-4 pt-8 sm:pt-12 lg:pt-16 justify-center lg:justify-start">
             <button
               onClick={handlePrev}
-              className="group flex size-8 items-center justify-center rounded-full bg-blue-900/40 border border-blue-400/50 hover:bg-blue-800/60"
+              className="group flex size-10 sm:size-12 items-center justify-center rounded-full bg-blue-900/40 border border-blue-400/50 hover:bg-blue-800/60 transition-all duration-300 hover:scale-110 active:scale-95"
+              aria-label="Previous testimonial"
             >
-              <ArrowLeft className="size-5 text-blue-200 transition-transform duration-300 group-hover:rotate-12" />
+              <ArrowLeft className="size-4 sm:size-5 text-blue-200 transition-transform duration-300 group-hover:-translate-x-0.5" />
             </button>
             <button
               onClick={handleNext}
-              className="group flex size-8 items-center justify-center rounded-full bg-blue-900/40 border border-blue-400/50 hover:bg-blue-800/60"
+              className="group flex size-10 sm:size-12 items-center justify-center rounded-full bg-blue-900/40 border border-blue-400/50 hover:bg-blue-800/60 transition-all duration-300 hover:scale-110 active:scale-95"
+              aria-label="Next testimonial"
             >
-              <ArrowRight className="size-5 text-blue-200 transition-transform duration-300 group-hover:-rotate-12" />
+              <ArrowRight className="size-4 sm:size-5 text-blue-200 transition-transform duration-300 group-hover:translate-x-0.5" />
             </button>
+          </div>
+
+          {/* Dots indicator for mobile */}
+          <div className="flex justify-center lg:justify-start gap-2 pt-4 lg:hidden">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActive(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  isActive(index) 
+                    ? 'bg-blue-400 w-6' 
+                    : 'bg-blue-400/30 hover:bg-blue-400/50'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -188,30 +210,31 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="py-20 px-5 min-h-screen ">
-      <div className="max-w-6xl md:mx-20 sm:mx-5">
+    <div className="min-h-screen bg-slate-950 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col md:items-start sm:items-center mb-10">
-          <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
+        <div className="flex flex-col items-center lg:items-start mb-12 sm:mb-16 lg:mb-20">
+          <div className="min-w-fit border border-white/30 rounded-full px-4 sm:px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-6 sm:mb-8">
             <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
-            <span className="text-blue-200 text-sm font-medium tracking-wider">
+            <span className="text-blue-200 text-xs sm:text-sm font-medium tracking-wider">
               TESTIMONIALS
             </span>
           </div>
 
-          <h2 className="font-bold text-white text-2xl md:text-4xl lg:text-5xl leading-tight mb-6">
+          <h2 className="font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-4 sm:mb-6 text-center lg:text-left">
             Trusted by enterprises{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
               Worldwide
             </span>
           </h2>
 
-          <p className="text-left text-blue-200/80 text-lg max-w-2xl">
+          <p className="text-center lg:text-left text-blue-200/80 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0">
             Discover how Fyodor helps organizations accelerate growth, improve
             collaboration, and achieve impactful results.
           </p>
         </div>
       </div>
+      
       <TestimonialCarousel
         testimonials={demoTestimonials}
         autoplay
