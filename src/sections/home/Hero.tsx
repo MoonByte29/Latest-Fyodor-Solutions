@@ -65,7 +65,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-lg md:text-xl text-slate-300 max-w-3xl md:mx-20 sm:mx-5 mb-10"
+          className="text-lg md:text-xl text-slate-300 max-w-3xl md:mx-auto sm:mx-5 mb-10"
         >
           Fyodor is a next-generation consulting firm specializing in IT
           transformation, Cloud, AI, QA-Automation, and Data Engineering. Our

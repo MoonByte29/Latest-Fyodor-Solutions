@@ -40,7 +40,7 @@ const AboutSection = () => {
 
   return (
     <div className="py-20 px-5 min-h-screen">
-      <div className="max-w-6xl md:mx-20 sm:mx-5">
+      <div className="max-w-6xl md:mx-auto sm:mx-5">
         {/* Header */}
         <div className="flex flex-col md:items-start sm:items-center mb-16">
           <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">

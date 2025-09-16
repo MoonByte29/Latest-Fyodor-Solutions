@@ -143,7 +143,7 @@ const OpportunityDiscovery = () => {
 
   return (
     <>
-      <section className="relative max-w-6xl md:mx-20 sm:mx-5 flex flex-col items-center justify-center min-h-screen text-white overflow-hidden">
+      <section className="relative max-w-6xl md:mx-auto sm:mx-5 flex flex-col items-center justify-center min-h-screen text-white overflow-hidden">
         {/* Hero */}
         <div className="flex flex-col items-center justify-center min-h-screen text-white py-20 px-4">
           <motion.div
@@ -177,7 +177,7 @@ const OpportunityDiscovery = () => {
               </span>
             </h1>
 
-            <p className="text-slate-300 text-xl md:text-2xl max-w-3xl md:mx-20 sm:mx-5 mb-10">
+            <p className="text-slate-300 text-xl md:text-2xl max-w-3xl md:mx-auto sm:mx-5 mb-10">
               We help businesses identify untapped markets, optimize strategies,
               and discover high-impact opportunities that fuel innovation and
               sustainable growth.
@@ -248,7 +248,7 @@ const OpportunityDiscovery = () => {
 
         {/* Services section */}
         <div id="services" className="py-20 px-4 w-full">
-          <div className="max-w-7xl md:mx-20 sm:mx-5">
+          <div className="max-w-7xl md:mx-auto sm:mx-5">
             <div className="flex flex-col md:items-start sm:items-center mb-16">
               <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
                 <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
@@ -309,7 +309,7 @@ const OpportunityDiscovery = () => {
 
         {/* Advantages */}
         <div className="relative py-20 px-4 w-full">
-          <div className="max-w-7xl md:mx-20 sm:mx-5">
+          <div className="max-w-7xl md:mx-auto sm:mx-5">
             <div className="text-center mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -343,7 +343,7 @@ const OpportunityDiscovery = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-slate-300 text-xl max-w-3xl md:mx-20 sm:mx-5"
+                className="text-slate-300 text-xl max-w-3xl md:mx-auto sm:mx-5"
               >
                 We combine process intelligence, domain expertise, and delivery
                 focus to turn discoveries into actionable automation programmes.
@@ -392,7 +392,7 @@ const OpportunityDiscovery = () => {
 
         {/* Process */}
         <div className="py-20 px-4 w-full">
-          <div className="max-w-7xl md:mx-20 sm:mx-5">
+          <div className="max-w-7xl md:mx-auto sm:mx-5">
             <div className="text-center mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -425,7 +425,7 @@ const OpportunityDiscovery = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-slate-300 text-xl max-w-3xl md:mx-20 sm:mx-5"
+                className="text-slate-300 text-xl max-w-3xl md:mx-auto sm:mx-5"
               >
                 A structured methodology that transforms your business
                 challenges into automation-ready opportunities.
@@ -484,7 +484,7 @@ const OpportunityDiscovery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-5xl md:mx-20 sm:mx-5 bg-gradient-to-br from-blue-500/10 via-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden"
+            className="max-w-5xl md:mx-auto sm:mx-5 bg-gradient-to-br from-blue-500/10 via-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden"
           >
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-violet-500/10 rounded-full blur-3xl"></div>
@@ -496,7 +496,7 @@ const OpportunityDiscovery = () => {
               </span>
             </h3>
 
-            <p className="text-slate-300 text-xl mb-8 max-w-2xl md:mx-20 sm:mx-5">
+            <p className="text-slate-300 text-xl mb-8 max-w-2xl md:mx-auto sm:mx-5">
               Let’s discuss how Fyodor can uncover automation-ready workflows
               and build a prioritized roadmap with measurable ROI.
             </p>

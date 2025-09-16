@@ -70,9 +70,9 @@ const PartnerSection: FC = () => {
 
   return (
     <div className="min-h-screen w-full py-20">
-      <div className="max-w-7xl md:mx-20 sm:mx-5 px-4">
+      <div className="max-w-7xl md:mx-auto sm:mx-5 px-4">
         {/* Section heading */}
-        <div className="max-w-6xl md:mx-20 sm:mx-5">
+        <div className="max-w-6xl md:mx-auto sm:mx-5">
           <div className="flex flex-col items-center mb-16">
             {/* Enhanced Benefits Badge */}
             <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
@@ -91,7 +91,7 @@ const PartnerSection: FC = () => {
             </h2>
 
             {/* Subtitle */}
-            <p className="text-center text-slate-300 text-lg max-w-2xl md:mx-20 sm:mx-5">
+            <p className="text-center text-slate-300 text-lg max-w-2xl md:mx-auto sm:mx-5">
               Powering innovation alongside the world's most forward-thinking companies
             </p>
           </div>

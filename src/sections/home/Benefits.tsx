@@ -45,12 +45,12 @@ const Benefits = () => {
     { icon: <Target className="w-8 h-8" />, color: "#1e3a8a" },
     { icon: <Brain className="w-8 h-8" />, color: "#5b1d8e" },
     { icon: <Users className="w-8 h-8" />, color: "#064e3b" },
-    { icon: <Globe className="w-8 h-8" />, color: "#3b82f6"},
+    { icon: <Globe className="w-8 h-8" />, color: "#3b82f6" },
   ];
 
   return (
     <div className="py-20 px-5 min-h-screen">
-      <div className="max-w-6xl md:mx-20 sm:mx-5">
+      <div className="max-w-6xl md:mx-auto sm:mx-5">
         {/* Section Header */}
         <div className="flex flex-col md:items-start sm:items-center mb-16">
           <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
@@ -74,40 +74,41 @@ const Benefits = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-w-full">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 border border-slate-700/50 hover:border-blue-500/30 shadow-lg hover:shadow-xl hover:shadow-blue-500/10"
-            >
-              {/* Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-violet-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="flex justify-center w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-w-full">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 border border-slate-700/50 hover:border-blue-500/30 shadow-lg hover:shadow-xl hover:shadow-blue-500/10"
+              >
+                {/* Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-violet-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-              {/* Glass Icon (1 per feature) */}
-              <div className="relative z-10 mb-6">
-                <GlassIcons items={[items[index]]} />
-              </div>
+                {/* Glass Icon (1 per feature) */}
+                <div className="relative z-10 mb-6">
+                  <GlassIcons items={[items[index]]} />
+                </div>
 
-              {/* Title */}
-              <h3 className="relative z-10 text-xl font-bold text-white mb-4 leading-snug group-hover:text-blue-200 transition-colors duration-300">
-                {feature.title}
-              </h3>
+                {/* Title */}
+                <h3 className="relative z-10 text-xl font-bold text-white mb-4 leading-snug group-hover:text-blue-200 transition-colors duration-300">
+                  {feature.title}
+                </h3>
 
-              {/* Description */}
-              <p className="relative z-10 text-slate-300 leading-relaxed mb-5 text-base">
-                {feature.description}
-              </p>
-
-              {/* Subtitle */}
-              <div className="relative z-10 pt-4 border-t border-slate-700/50 group-hover:border-blue-500/30 transition-colors duration-300">
-                <p className="text-slate-400 leading-relaxed text-sm italic">
-                  {feature.subtitle}
+                {/* Description */}
+                <p className="relative z-10 text-slate-300 leading-relaxed mb-5 text-base">
+                  {feature.description}
                 </p>
-              </div>
-            </div>
-          ))}
-        </div>
 
+                {/* Subtitle */}
+                <div className="relative z-10 pt-4 border-t border-slate-700/50 group-hover:border-blue-500/30 transition-colors duration-300">
+                  <p className="text-slate-400 leading-relaxed text-sm italic">
+                    {feature.subtitle}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

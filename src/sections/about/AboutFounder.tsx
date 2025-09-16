@@ -13,7 +13,7 @@ const ContainerScrollTitle: React.FC<ContainerScrollTitleProps> = ({
   return (
     <div
       style={{ transform: `translateY(${translate}px)` }}
-      className="md:mx-20 sm:mx-5 max-w-5xl text-center"
+      className="md:mx-auto sm:mx-5 max-w-5xl text-center"
     >
       {children}
     </div>
@@ -37,7 +37,7 @@ const ContainerScrollCard: React.FC<ContainerScrollCardProps> = ({
         boxShadow:
           "0 0 #0000004d, 0 6px 14px #0000003a, 0 25px 25px #0000002d, 0 60px 35px #00000020",
       }}
-      className="md:mx-20 sm:mx-5 -mt-12 w-full max-w-5xl rounded-[30px] border border-indigo-400/40 bg-slate-900 p-2 shadow-xl md:p-6"
+      className="md:mx-auto sm:mx-5 -mt-12 w-full max-w-5xl rounded-[30px] border border-indigo-400/40 bg-slate-900 p-2 shadow-xl md:p-6"
     >
       <div className="size-full overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 md:p-6">
         {children}
@@ -89,7 +89,7 @@ const AboutFounder: React.FC = () => {
               </h2>
 
               {/* Subtext */}
-              <p className="text-lg md:text-xl text-slate-300 max-w-2xl md:mx-20 sm:mx-5">
+              <p className="text-lg md:text-xl text-slate-300 max-w-2xl md:mx-auto sm:mx-5">
                 Driven by vision, passion, and innovation, our founder built
                 Fyodor to empower businesses worldwide.
               </p>

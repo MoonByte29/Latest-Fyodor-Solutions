@@ -124,7 +124,7 @@ const AIAutomation = () => {
   return (
     <>
       {" "}
-      <section className="relative max-w-7xl md:mx-20 sm:mx-5 flex flex-col items-center justify-center min-h-screen text-white overflow">
+      <section className="relative max-w-7xl md:mx-auto sm:mx-5 flex flex-col items-center justify-center min-h-screen text-white overflow">
         {/* Hero Section */}
         <div className="flex flex-col items-center justify-center text-white py-20 px-4">
           <HeaderSection
@@ -172,7 +172,7 @@ const AIAutomation = () => {
 
         {/* Services Section */}
         <div id="services" className="py-20 px-4 w-full">
-          <div className="max-w-7xl md:mx-20 sm:mx-5">
+          <div className="max-w-7xl md:mx-auto sm:mx-5">
             <div className="flex flex-col md:items-start sm:items-center mb-16">
               <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
                 <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
@@ -232,7 +232,7 @@ const AIAutomation = () => {
 
         {/* Advantages Section */}
         <div className="relative py-20 px-4 w-full">
-          <div className="max-w-7xl md:mx-20 sm:mx-5">
+          <div className="max-w-7xl md:mx-auto sm:mx-5">
             <div className="text-center mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -266,7 +266,7 @@ const AIAutomation = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-slate-300 text-xl max-w-3xl md:mx-20 sm:mx-5"
+                className="text-slate-300 text-xl max-w-3xl md:mx-auto sm:mx-5"
               >
                 We combine technical expertise with business acumen to deliver
                 AI solutions that create real value.
@@ -316,7 +316,7 @@ const AIAutomation = () => {
 
         {/* Process Section */}
         <div className="py-20 px-4 w-full">
-          <div className="max-w-7xl md:mx-20 sm:mx-5">
+          <div className="max-w-7xl md:mx-auto sm:mx-5">
             <div className="text-center mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -350,7 +350,7 @@ const AIAutomation = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-slate-300 text-xl max-w-3xl md:mx-20 sm:mx-5"
+                className="text-slate-300 text-xl max-w-3xl md:mx-auto sm:mx-5"
               >
                 A structured methodology that transforms your business
                 challenges into AI-powered solutions
@@ -434,7 +434,7 @@ const AIAutomation = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-5xl md:mx-20 sm:mx-5 bg-gradient-to-br from-blue-500/10 via-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden"
+            className="max-w-5xl md:mx-auto sm:mx-5 bg-gradient-to-br from-blue-500/10 via-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden"
           >
             {/* Background elements */}
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -447,7 +447,7 @@ const AIAutomation = () => {
               </span>
             </h3>
 
-            <p className="text-slate-300 text-xl mb-8 max-w-2xl md:mx-20 sm:mx-5">
+            <p className="text-slate-300 text-xl mb-8 max-w-2xl md:mx-auto sm:mx-5">
               Let's discuss how Fyodor can implement AI and automation solutions
               that drive efficiency, innovation, and competitive advantage for
               your business.

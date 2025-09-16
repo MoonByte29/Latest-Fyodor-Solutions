@@ -108,7 +108,7 @@ const ManagedDelivery = () => {
 
   return (
     <>
-      <section className="relative max-w-6xl md:mx-20 sm:mx-5 flex flex-col items-center justify-center min-h-screen text-white overflow-hidden">
+      <section className="relative max-w-6xl md:mx-auto sm:mx-5 flex flex-col items-center justify-center min-h-screen text-white overflow-hidden">
         {/* Hero */}
         <div className="flex flex-col items-center justify-center min-h-screen text-white py-20 px-4">
           <motion.div
@@ -139,7 +139,7 @@ const ManagedDelivery = () => {
               </span>
             </h1>
 
-            <p className="text-slate-300 text-xl md:text-2xl max-w-3xl md:mx-20 sm:mx-5 mb-10">
+            <p className="text-slate-300 text-xl md:text-2xl max-w-3xl md:mx-auto sm:mx-5 mb-10">
               Free your teams to focus on innovation while Fyodor manages your
               AI and automation delivery — with full accountability, from infra
               and SLA-backed support to proactive roadmap execution.
@@ -149,7 +149,7 @@ const ManagedDelivery = () => {
 
         {/* What We Deliver */}
         <div id="services" className="py-20 px-4 w-full">
-          <div className="max-w-7xl md:mx-20 sm:mx-5">
+          <div className="max-w-7xl md:mx-auto sm:mx-5">
             <div className="flex flex-col md:items-start sm:items-center mb-16">
               <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
                 <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
@@ -230,7 +230,7 @@ const ManagedDelivery = () => {
         <PartnerSection />
         {/* Why Choose Us */}
         <div className="relative py-20 px-4 w-full">
-          <div className="max-w-7xl md:mx-20 sm:mx-5">
+          <div className="max-w-7xl md:mx-auto sm:mx-5">
             <div className="text-center mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -296,7 +296,7 @@ const ManagedDelivery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-5xl md:mx-20 sm:mx-5 bg-gradient-to-br from-indigo-300/10 via-blue-400/10 to-violet-400/10 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden"
+            className="max-w-5xl md:mx-auto sm:mx-5 bg-gradient-to-br from-indigo-300/10 via-blue-400/10 to-violet-400/10 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden"
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to scale your automation programs with{" "}
@@ -305,7 +305,7 @@ const ManagedDelivery = () => {
               </span>
             </h3>
 
-            <p className="text-slate-300 text-xl mb-8 max-w-2xl md:mx-20 sm:mx-5">
+            <p className="text-slate-300 text-xl mb-8 max-w-2xl md:mx-auto sm:mx-5">
               Let’s discuss how Fyodor can manage delivery of your AI &
               automation systems — resilient, scalable, and ROI-driven.
             </p>
