@@ -1,6 +1,6 @@
-import React from "react";
+import { FC } from "react";
 
-const PartnerSection = () => {
+const PartnerSection: FC = () => {
   const partners = [
     {
       id: 1,
@@ -69,7 +69,7 @@ const PartnerSection = () => {
   const duplicatedPartnersRow2 = [...partners, ...partners];
 
   return (
-    <div className="min-h-screen w-full py-20 bg-slate-950">
+    <div className="min-h-screen w-full py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section heading */}
         <div className="max-w-6xl mx-auto">
