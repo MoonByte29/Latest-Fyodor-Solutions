@@ -13,21 +13,21 @@ const sections: Section[] = [
     number: "01",
     title: "Our History",
     content:
-      "Founded as Miral Software Labs, our company initially focused on providing Robotic Process Automation (RPA) solutions to enhance business efficiency, along with maintenance services for web design and app development. Our commitment to timely delivery and meticulous attention to detail quickly garnered the attention of international clients. Today, rebranded as Aventiq, we serve a diverse clientele across the USA, UK, Europe, and UAE, spanning industries such as finance, manufacturing, supply chain, and utilities.",
+      "Fyodor Solutions was founded with a vision to deliver best-in-class, futuristic solutions that empower enterprises through innovation and strategy. The company quickly built strong industry networks and established expertise in areas such as Generative AI, Power Platform, Robotic Process Automation, and governance models. With a focus on automation, .NET, chatbots, and PMO services, Fyodor has grown into a trusted partner for organizations seeking digital transformation. Its commitment to scaling innovation, enabling Centers of Excellence, and enhancing governance frameworks continues to strengthen its impact. Fyodor remains dedicated to global expansion, unified enterprise solutions, and building deep, long-term client partnerships.",
   },
   {
     id: "mission",
     number: "02",
     title: "Our Mission",
     content:
-      "Our mission is to empower businesses through innovative technology solutions, focusing on efficiency, scalability, and sustainability. We strive to deliver solutions that drive measurable value, ensuring that our clients remain competitive in their respective industries.",
+      "To empower growing organizations with actionable insights, hands-on execution, and strategic clarity across finance, operations, and transformation. We combine best of consulting and Industry expertise with boutique agility to deliver high-impact solutions that simplify complexity, strengthen internal capabilities, and enable sustainable, long-term success. Our goal is to not just advise—but to partner, execute & elevate",
   },
   {
     id: "vision",
     number: "03",
     title: "Our Vision",
     content:
-      "Our vision is to become a global leader in delivering transformative digital solutions, helping businesses unlock their full potential by leveraging cutting-edge technologies. We aim to continuously innovate, driving sustainable growth and making a lasting impact on the industries we serve.",
+      "To be the most trusted strategic partner for forward-thinking businesses navigating change. We envision a world where startups, SMEs, and social enterprises operate with enterprise-grade efficiency, clarity, and confidence—driven by data, powered by people, and enabled by meaningful partnerships.Through innovation, collaboration, and consistent delivery excellence, we aim to become the go-to consulting firm across India, APAC, and emerging markets",
   },
 ];
 
@@ -66,18 +66,24 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-10 min-w-screen max-h-fit">
           {/* Left Column */}
           <div className="text-justify text-slate-300">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
-            quaerat magnam, provident maiores tenetur totam, debitis blanditiis
-            temporibus, illo fugit nisi sint suscipit corporis numquam
-            praesentium! Culpa, quis! Laborum culpa enim quisquam dolores
-            asperiores accusantium reiciendis cupiditate maxime, saepe aut ex
-            perspiciatis eum quis nihil qui dolorum sed ipsum deserunt mollitia
-            odio illum incidunt distinctio? Consequatur neque rerum velit
-            impedit sed ipsa temporibus fugiat excepturi numquam ducimus dolore,
-            ipsum obcaecati inventore eius mollitia, laboriosam illum minima
-            nobis? Neque quasi reiciendis facilis, debitis, aperiam blanditiis
-            mollitia molestias quas excepturi totam rem autem magni vel deserunt
-            quibusdam doloribus! Nulla, perspiciatis repellendus. Architecto.
+            Fyodor Consulting is a next-generation consulting firm specializing
+            in IT transformation, Cloud, AI, QA Automation, and Data
+            Engineering. With a strong focus on innovation and community-centric
+            learning, Fyodor empowers businesses and professionals through a
+            blend of deep technical expertise and practical, outcome-driven
+            strategies. The firm’s approach is built on three core strengths.
+            Strategic Insights integrate finance, operations, and technology to
+            deliver agile, measurable, and sustainable growth for startups,
+            SMEs, and large enterprises. Multi-Channel Mastery enhances client
+            engagement through LinkedIn, referrals, thought leadership, and
+            community events, ensuring brand visibility and trust across diverse
+            industries and geographies. Data-Driven Precision leverages
+            real-time data, dashboards, and automation to optimize performance,
+            reduce inefficiencies, and enable smarter, faster, and more
+            accountable decision-making. By combining innovation with proven
+            methodologies, Fyodor Consulting delivers transformative solutions
+            that drive sustainable growth and lasting impact, positioning itself
+            as a trusted partner in the evolving digital era.
           </div>
 
           {/* Right Column - Sections */}

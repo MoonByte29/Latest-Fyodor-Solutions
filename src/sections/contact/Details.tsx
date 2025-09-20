@@ -32,7 +32,7 @@ const MOBILE_BREAKPOINT = 768;
 const cardData: BentoCardProps[] = [
   {
     color: "#060010",
-    title: "+9711 4475 8172",
+    title: "+91-7822922933",
     description: "Primary contact number",
     label: "Leisure",
   },
@@ -40,13 +40,6 @@ const cardData: BentoCardProps[] = [
     color: "#060010",
     title: "INDIA Office",
     description: "BITES, BLOCHE, MOLHAI COOPERATIVE INDUSTRIAL SERVICE",
-    label: "Adverse",
-  },
-  {
-    color: "#060010",
-    title: "UBA Office",
-    description:
-      "AKRITO TECHNOLOGIES INC. GROC BALADRINE DRIVE SET, TOCALISTIN, TX 75724, UBA",
     label: "Adverse",
   },
   {
@@ -60,7 +53,7 @@ const cardData: BentoCardProps[] = [
     title: "Operating Hours",
     description:
       "MON TO FIB: 9:00AM - 8:30PM | BAT: 0:00AM - 8:30PM | BLIN: 0:03BD",
-    label: "Genotype Name",
+    // label: "Genotype Name",
   },
   {
     color: "#060010",

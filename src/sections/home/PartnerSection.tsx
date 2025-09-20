@@ -154,7 +154,7 @@ const PartnerSection: FC = () => {
                   }
                 >
                   <div className="p-6 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm min-w-[180px]">
-                    <div className="h-16 flex flex-col items-center justify-center gap-3">
+                    <div className="h-16 flex items-center justify-center gap-3">
                       <img
                         src={partner.logo}
                         alt={`${partner.name} logo`}
@@ -185,8 +185,8 @@ const PartnerSection: FC = () => {
                     partner.website && window.open(partner.website, "_blank")
                   }
                 >
-                  <div className="bg-slate-800/50 border border-blue-700/50 rounded-xl p-6 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-violet-400 hover:shadow-lg hover:shadow-violet-500/10 backdrop-blur-sm min-w-[180px]">
-                    <div className="h-16 flex flex-col items-center justify-center gap-3">
+                  <div className="p-6 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 hover:shadow-lg hover:shadow-violet-500/10 backdrop-blur-sm min-w-[180px]">
+                    <div className="h-16 flex items-center justify-center gap-3">
                       <img
                         src={partner.logo}
                         alt={`${partner.name} logo`}
