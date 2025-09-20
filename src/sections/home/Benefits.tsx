@@ -27,14 +27,14 @@ const Benefits = () => {
     {
       title: "Managed Delivery, Not Freelancers",
       description:
-        "We're not a staffing firm. AventIQ delivers AI and automation through curated pods — trained, governed, and accountable to outcomes.",
+        "We're not a staffing firm. Fyodordelivers AI and automation through curated pods — trained, governed, and accountable to outcomes.",
       subtitle:
         "Each pod comes with built-in delivery leadership, QA, documentation, and playbooks. That means less risk, faster ramp-up, and better execution velocity. No freelance chaos. Just structured, high-quality delivery from day one.",
     },
     {
       title: "Built for Global Scale",
       description:
-        "Whether you're a high-growth startup in need of speed or a large enterprise navigating compliance and scale — AventIQ fits.",
+        "Whether you're a high-growth startup in need of speed or a large enterprise navigating compliance and scale — Fyodorfits.",
       subtitle:
         "Our model supports distributed delivery with built-in localization, cross-border compliance handling, and flexible ramp-up. We've built systems across banking, insurance, auto, and retail — and we scale where and when you need us.",
     },

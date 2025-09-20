@@ -4,23 +4,23 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "What services does AventIQ offer?",
+    question: "What services does Fyodoroffer?",
     answer:
-      "AventIQ offers a wide range of services including digital transformation, cloud solutions, AI integration, data analytics, and IT consulting tailored for enterprise needs.",
+      "Fyodoroffers a wide range of services including digital transformation, cloud solutions, AI integration, data analytics, and IT consulting tailored for enterprise needs.",
   },
   {
-    question: "Which industries does AventIQ serve?",
+    question: "Which industries does Fyodorserve?",
     answer:
       "We serve a variety of industries including finance, healthcare, manufacturing, retail, and government sectors, offering specialized solutions for each.",
   },
   {
     question:
-      "What makes AventIQ different from other technology consulting firms?",
+      "What makes Fyodordifferent from other technology consulting firms?",
     answer:
       "Our unique approach blends deep industry expertise, innovative technologies, and a client-first mindset. We focus on measurable outcomes and long-term partnerships.",
   },
   {
-    question: "What measurable outcomes can AventIQ deliver?",
+    question: "What measurable outcomes can Fyodordeliver?",
     answer:
       "We help businesses achieve 150% improvement in operational efficiency, reduce costs, and drive new revenue streams through data-driven decision-making.",
   },
@@ -30,7 +30,7 @@ const faqs = [
       "Absolutely. We offer continuous support, performance monitoring, optimization, and managed services to ensure sustained success beyond project delivery.",
   },
   {
-    question: "How do I know if AventIQ is the right partner for my business?",
+    question: "How do I know if Fyodoris the right partner for my business?",
     answer:
       "Schedule a free consultation with our experts. We'll assess your goals and help you determine if our capabilities align with your needs.",
   },
