@@ -13,7 +13,7 @@ const navItems = [
         name: "AI & Automation Consulting",
         href: "/services/ai-&-automation-consulting",
       },
-      { name: "Opportunity Discovery", href: "/services/opportunit-discovery" },
+      { name: "Opportunity Discovery", href: "/services/opportunity-discovery" },
       {
         name: "Cybersecurity & Compliance",
         href: "/services/cybersecurity-&-compliance-compilance",
