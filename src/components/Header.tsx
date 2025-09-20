@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ArrowRight, Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 const navItems = [
   { name: "About", href: "/about" },
@@ -121,9 +122,9 @@ export default function Header() {
 
       {/* CTA Button (desktop only) */}
       <div className="hidden md:flex">
-        <button className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md">
+        <HashLink to="/contact#contact-form" className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md">
           Get Started <ArrowRight size={16} />
-        </button>
+        </HashLink>
       </div>
 
       {/* Mobile Menu Button */}

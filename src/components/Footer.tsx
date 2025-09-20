@@ -117,7 +117,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-slate-800 mt-10 pt-8 flex flex-col items-center space-y-6">
           {/* Social Icons */}
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <a
               href="#"
               className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
@@ -142,7 +142,7 @@ const Footer = () => {
             >
               <Instagram className="w-5 h-5" />
             </a>
-          </div>
+          </div> */}
 
           {/* Newsletter */}
           <form className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-3">

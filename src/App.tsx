@@ -16,6 +16,7 @@ import Finance from "./pages/industry/Finance";
 import ImplementationServices from "./pages/services/ImplementationServices";
 import EnterpriseAppDevelopment from "./pages/services/EnterpriseAppDevelopment";
 import CustomSolutions from "./pages/services/CustomSolutions";
+import ScrollToTop from "./hooks/ScrollToTop";
 
 function App() {
   return (
@@ -30,27 +31,44 @@ function App() {
         />
         <div className="relative z-10 flex flex-col min-h-screen">
           <Header />
+
+          <ScrollToTop />
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
- 
+
               {/* SERVICES PAGE */}
-              <Route path="/services/ai-&-automation-consulting" element={<AIAutomation />} />
               <Route
-                path="/services/opportunit-discovery"
+                path="/services/ai-&-automation-consulting"
+                element={<AIAutomation />}
+              />
+              <Route
+                path="/services/opportunity-discovery"
                 element={<OpportunityDiscovery />}
               />
               <Route
                 path="/services/cybersecurity-&-compliance-compilance"
                 element={<CybersecurityCompliance />}
               />
-              <Route path="/services/managed-delivery" element={<ManagedDelivery />} />
-              <Route path="/services/implementation-services" element={<ImplementationServices />} />
-              <Route path="/services/enterprise-app-development" element={<EnterpriseAppDevelopment />} />
-              <Route path="/services/custom-solutions" element={<CustomSolutions />} />
+              <Route
+                path="/services/managed-delivery"
+                element={<ManagedDelivery />}
+              />
+              <Route
+                path="/services/implementation-services"
+                element={<ImplementationServices />}
+              />
+              <Route
+                path="/services/enterprise-app-development"
+                element={<EnterpriseAppDevelopment />}
+              />
+              <Route
+                path="/services/custom-solutions"
+                element={<CustomSolutions />}
+              />
 
-
+              {/* INDUSTRY  */}
               <Route path="/banking" element={<Banking />} />
               <Route path="/insurance" element={<Insurance />} />
               <Route path="/finance" element={<Finance />} />

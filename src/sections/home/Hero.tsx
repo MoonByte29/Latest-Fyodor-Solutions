@@ -2,6 +2,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { HashLink } from 'react-router-hash-link';
 
 export default function Hero() {
   return (
@@ -53,7 +54,7 @@ export default function Hero() {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-6"
         >
-          Your Vision <br/>
+          Your Vision <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-blue-400 to-violet-400">
             Intelligently Engineered
           </span>
@@ -80,9 +81,11 @@ export default function Hero() {
           viewport={{ once: true }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
-          <button className="px-6 py-3 rounded-full bg-white text-black font-medium flex items-center gap-2 hover:bg-neutral-200 transition text-sm sm:text-base">
-            Schedule a Consultation <ArrowRight size={18} />
-          </button>
+          <div className="px-6 py-3 rounded-full bg-white text-black font-medium flex items-center gap-2 hover:bg-neutral-200 transition text-sm sm:text-base">
+        <HashLink smooth to="/contact#contact-form">
+Schedule a Consultation
+</HashLink>
+          </div>
         </motion.div>
 
         {/* Trust signals */}
