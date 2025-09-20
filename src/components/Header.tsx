@@ -7,10 +7,14 @@ const navItems = [
   {
     name: "Service",
     dropdown: [
-      { name: "AI & Automation Consulting", href: "/ai-automation" },
-      { name: "Opportunity Discovery", href: "/opportunity-discovery" },
-      { name: "Cybersecurity & Compliance", href: "/cybersecurity-compilance" },
-      { name: "Managed Delivery", href: "/managed-delivery" },
+      { name: "AI & Automation Consulting", href: "/services/ai-&-automation-consulting" },
+      { name: "Opportunity Discovery", href: "/services/opportunit-discovery" },
+      { name: "Cybersecurity & Compliance", href: "/services/cybersecurity-&-compliance-compilance" },
+      { name: "Managed Delivery", href: "/services/managed-delivery" },
+      { name: "Implementation Services", href: "/services/implementation-services" },
+      { name: "Enterprise App Development", href: "/services/enterprise-app-development" },
+      { name: "Custom Solutions", href: "/services/custom-solutions" },
+
     ],
   },
   {

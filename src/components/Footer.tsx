@@ -1,5 +1,14 @@
 import React from "react";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,23 +17,25 @@ const Footer = () => {
     <footer className=" py-3 px-5 min-h-screen">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 bg-slate-900">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Contact Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3 bg-slate-800/50 rounded-lg p-4">
               <Mail className="w-5 h-5 text-blue-400" />
-              <span className="text-slate-300 text-sm">contact@fydor.sol</span>
+              <span className="text-slate-300 text-sm">
+                Info@FyodorSolutions.com
+              </span>
             </div>
             <div className="flex items-center space-x-3 bg-slate-800/50 rounded-lg p-4">
               <Phone className="w-5 h-5 text-blue-400" />
-              <span className="text-slate-300 text-sm">+91 11 4475 6172</span>
+              <span className="text-slate-300 text-sm">+91-7822922933</span>
             </div>
             <div className="flex items-start space-x-3 bg-slate-800/50 rounded-lg p-4">
               <MapPin className="w-5 h-5 text-blue-400 mt-1" />
               <span className="text-slate-300 text-sm leading-relaxed">
-                <strong>INDIA:</strong> B1/E13, Block E, Mohan Cooperative Industrial Estate, Badarpur, New Delhi, 110044, India
-                <br />
-                <strong>USA:</strong> Fyodor Solutions. 5900 Balcones Drive STE 100 Austin, TX 78731, USA
+                <strong>INDIA:</strong> B1/E13, Block E, Mohan Cooperative
+                Industrial Estate, Badarpur, New Delhi, 110044, India
               </span>
             </div>
           </div>
@@ -33,14 +44,19 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold mb-4">Menu</h3>
             <ul className="space-y-2">
-              {["Home", "About", "Case Studies", "Blog", "Orchestrate", "DMS", "Contact", "Privacy"].map((item, idx) => (
+              {[
+                { label: "Home", path: "/" },
+                { label: "About", path: "/about" },
+                { label: "Industry", path: "/industry" },
+                { label: "Contact", path: "/contact" },
+              ].map((item, idx) => (
                 <li key={idx}>
-                  <a
-                    href="#"
+                  <Link
+                    to={item.path}
                     className="block text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -60,12 +76,38 @@ const Footer = () => {
                 "Enterprise App Development",
               ].map((service, idx) => (
                 <li key={idx}>
-                  <a
-                    href="#"
+                  <Link
+                    to={`/services/${service
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`} 
                     className="block text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
                   >
                     {service}
-                  </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industry */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold mb-4">Industry</h3>
+            <ul className="space-y-2">
+              {[
+                "Automotive",
+                "Healthcare",
+                "Finance",
+                "Government",
+                "Construction",
+                "Retail",
+              ].map((industry, idx) => (
+                <li key={idx}>
+                  <Link
+                    to={`/industry/${industry.toLowerCase()}`}
+                    className="block text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
+                  >
+                    {industry}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -76,16 +118,28 @@ const Footer = () => {
         <div className="border-t border-slate-800 mt-10 pt-8 flex flex-col items-center space-y-6">
           {/* Social Icons */}
           <div className="flex space-x-4">
-            <a href="#" className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors">
+            <a
+              href="#"
+              className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
+            >
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="#" className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors">
+            <a
+              href="#"
+              className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
+            >
               <Twitter className="w-5 h-5" />
             </a>
-            <a href="#" className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors">
+            <a
+              href="#"
+              className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
+            >
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="#" className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors">
+            <a
+              href="#"
+              className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
+            >
               <Instagram className="w-5 h-5" />
             </a>
           </div>

@@ -13,6 +13,9 @@ import Banking from "./pages/industry/Banking";
 import Automotive from "./pages/industry/Automotive";
 import Insurance from "./pages/industry/Insurance";
 import Finance from "./pages/industry/Finance";
+import ImplementationServices from "./pages/services/ImplementationServices";
+import EnterpriseAppDevelopment from "./pages/services/EnterpriseAppDevelopment";
+import CustomSolutions from "./pages/services/CustomSolutions";
 
 function App() {
   return (
@@ -31,16 +34,23 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/ai-automation" element={<AIAutomation />} />
+ 
+              {/* SERVICES PAGE */}
+              <Route path="/services/ai-&-automation-consulting" element={<AIAutomation />} />
               <Route
-                path="/opportunity-discovery"
+                path="/services/opportunit-discovery"
                 element={<OpportunityDiscovery />}
               />
               <Route
-                path="/cybersecurity-compilance"
+                path="/services/cybersecurity-&-compliance-compilance"
                 element={<CybersecurityCompliance />}
               />
-              <Route path="/managed-delivery" element={<ManagedDelivery />} />
+              <Route path="/services/managed-delivery" element={<ManagedDelivery />} />
+              <Route path="/services/implementation-services" element={<ImplementationServices />} />
+              <Route path="/services/enterprise-app-development" element={<EnterpriseAppDevelopment />} />
+              <Route path="/services/custom-solutions" element={<CustomSolutions />} />
+
+
               <Route path="/banking" element={<Banking />} />
               <Route path="/insurance" element={<Insurance />} />
               <Route path="/finance" element={<Finance />} />
