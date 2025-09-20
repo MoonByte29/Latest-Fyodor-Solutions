@@ -119,7 +119,7 @@ const PartnerSection: FC = () => {
                   partner.website && window.open(partner.website, "_blank")
                 }
               >
-                <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm">
+                <div className="bg-slate-800/50  rounded-xl p-4 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm">
                   <div className="h-16 flex flex-col items-center justify-center gap-2">
                     <img
                       src={partner.logo}
@@ -153,7 +153,7 @@ const PartnerSection: FC = () => {
                     partner.website && window.open(partner.website, "_blank")
                   }
                 >
-                  <div className="bg-slate-800/50 border border-blue-700/50 rounded-xl p-6 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 group-hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm min-w-[180px]">
+                  <div className="p-6 transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm min-w-[180px]">
                     <div className="h-16 flex flex-col items-center justify-center gap-3">
                       <img
                         src={partner.logo}

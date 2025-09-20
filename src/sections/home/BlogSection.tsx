@@ -99,7 +99,7 @@ const BlogSection = () => {
                           <p className="text-blue-100/90 mb-4 flex-1 overflow-hidden text-sm leading-relaxed">
                             {truncateText(card.blog, 180)}
                           </p>
-                          <div className="flex-shrink-0">
+                          {/* <div className="flex-shrink-0">
                             <Link
                               to={card.url}
                               className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200"
@@ -118,7 +118,7 @@ const BlogSection = () => {
                                 />
                               </svg>
                             </Link>
-                          </div>
+                          </div> */}
                         </>
                       ) : (
                         <div className="flex flex-col items-center justify-center flex-1">
