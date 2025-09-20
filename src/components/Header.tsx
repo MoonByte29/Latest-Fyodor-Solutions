@@ -1,21 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { ArrowRight, Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
+import logo from "../assets/logo.jpg";
 
 const navItems = [
   { name: "About", href: "/about" },
   {
     name: "Service",
     dropdown: [
-      { name: "AI & Automation Consulting", href: "/services/ai-&-automation-consulting" },
+      {
+        name: "AI & Automation Consulting",
+        href: "/services/ai-&-automation-consulting",
+      },
       { name: "Opportunity Discovery", href: "/services/opportunit-discovery" },
-      { name: "Cybersecurity & Compliance", href: "/services/cybersecurity-&-compliance-compilance" },
+      {
+        name: "Cybersecurity & Compliance",
+        href: "/services/cybersecurity-&-compliance-compilance",
+      },
       { name: "Managed Delivery", href: "/services/managed-delivery" },
-      { name: "Implementation Services", href: "/services/implementation-services" },
-      { name: "Enterprise App Development", href: "/services/enterprise-app-development" },
+      {
+        name: "Implementation Services",
+        href: "/services/implementation-services",
+      },
+      {
+        name: "Enterprise App Development",
+        href: "/services/enterprise-app-development",
+      },
       { name: "Custom Solutions", href: "/services/custom-solutions" },
-
     ],
   },
   {
@@ -63,8 +75,16 @@ export default function Header() {
   return (
     <header className="relative z-50 flex items-center justify-between px-6 py-4 bg-transparent">
       {/* Logo */}
-      <Link className="text-xl md:text-2xl font-bold" to="/">
-        <span className="text-white">Fyodor</span>{" "}
+      <Link
+        to="/"
+        className="flex items-center space-x-2 text-xl md:text-2xl font-bold"
+      >
+        <img
+          src={logo}
+          alt="Fyodor Solutions Logo"
+          className="h-8 w-8 md:h-10 md:w-10 object-contain"
+        />
+        <span className="text-white">Fyodor</span>
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
           Solutions
         </span>
@@ -78,7 +98,9 @@ export default function Header() {
               <button
                 onClick={(e) => {
                   e.stopPropagation(); // stop bubbling
-                  setOpenDropdown(openDropdown === item.name ? null : item.name);
+                  setOpenDropdown(
+                    openDropdown === item.name ? null : item.name
+                  );
                 }}
                 className="flex items-center gap-1 px-3 py-1 text-sm text-neutral-300 hover:text-white"
                 aria-expanded={openDropdown === item.name}
@@ -122,7 +144,10 @@ export default function Header() {
 
       {/* CTA Button (desktop only) */}
       <div className="hidden md:flex">
-        <HashLink to="/contact#contact-form" className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md">
+        <HashLink
+          to="/contact#contact-form"
+          className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md"
+        >
           Get Started <ArrowRight size={16} />
         </HashLink>
       </div>
