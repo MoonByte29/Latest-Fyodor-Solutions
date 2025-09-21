@@ -6,7 +6,7 @@ import { HashLink } from 'react-router-hash-link';
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center px-4 min-h-[85vh] md:min-h-[90vh]">
+<section className="relative flex flex-col items-center justify-center text-center px-4 min-h-[70vh] md:min-h-[90vh]">
       {/* Background Glows - Reduced size for mobile */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         {/* Indigo glow */}
