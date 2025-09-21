@@ -4,9 +4,9 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "What services does Fyodoroffer?",
+    question: "What services does Fyodor offer?",
     answer:
-      "Fyodoroffers a wide range of services including digital transformation, cloud solutions, AI integration, data analytics, and IT consulting tailored for enterprise needs.",
+      "Fyodor offers a wide range of services including digital transformation, cloud solutions, AI integration, data analytics, and IT consulting tailored for enterprise needs.",
   },
   {
     question: "Which industries does Fyodor serve?",
@@ -30,7 +30,7 @@ const faqs = [
       "Absolutely. We offer continuous support, performance monitoring, optimization, and managed services to ensure sustained success beyond project delivery.",
   },
   {
-    question: "How do I know if Fyodoris the right partner for my business?",
+    question: "How do I know if Fyodor is the right partner for my business?",
     answer:
       "Schedule a free consultation with our experts. We'll assess your goals and help you determine if our capabilities align with your needs.",
   },
