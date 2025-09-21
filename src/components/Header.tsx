@@ -1,5 +1,4 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -90,6 +89,7 @@ export default function Header() {
           </Link>
         </div>
 
+<<<<<<< HEAD
         {/* Center - Navigation */}
         <nav className="flex justify-center items-center space-x-1 bg-neutral-900/70 px-4 py-2 rounded-full border border-neutral-700 backdrop-blur-md">
           {navItems.map((item, idx) =>
@@ -145,6 +145,65 @@ export default function Header() {
             )
           )}
         </nav>
+=======
+      {/* Desktop Nav */}
+      <div className="absolute left-1/2 transform -translate-x-1/2">
+      <nav className="hidden md:flex items-center space-x-1 bg-neutral-900/70 px-4 py-2 rounded-full border border-neutral-700 backdrop-blur-md flex-grow-0 mx-4">
+        {navItems.map((item, idx) =>
+          item.dropdown ? (
+            <div
+              key={idx}
+              className="relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setOpenDropdown(
+                    openDropdown === item.name ? null : item.name
+                  );
+                }}
+                className="flex items-center gap-1 px-3 py-1 text-sm text-neutral-300 hover:text-white whitespace-nowrap"
+                aria-expanded={openDropdown === item.name}
+              >
+                {item.name} <ChevronDown size={14} />
+              </button>
+              {openDropdown === item.name && (
+                <div className="absolute top-full mt-2 left-0 min-w-[200px] bg-neutral-900 border border-neutral-700 rounded-lg shadow-lg p-3 space-y-2 z-50">
+                  {item.dropdown.map((sub, i) => (
+                    <Link
+                      key={i}
+                      to={sub.href}
+                      onClick={() => setOpenDropdown(null)}
+                      className={`block px-3 py-1 text-sm rounded whitespace-nowrap ${
+                        location.pathname === sub.href
+                          ? "text-blue-400 font-medium"
+                          : "text-neutral-300 hover:text-white"
+                      }`}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link
+              key={idx}
+              to={item.href}
+              className={`px-3 py-1 text-sm rounded whitespace-nowrap ${
+                location.pathname === item.href
+                  ? "text-blue-400 font-medium"
+                  : "text-neutral-300 hover:text-white"
+              }`}
+            >
+              {item.name}
+            </Link>
+          )
+        )}
+      </nav>
+      </div>
+>>>>>>> 2d0528f6a3ca777b401e6df174aca224aeccd151
 
         {/* Right - CTA Button */}
         <div className="flex justify-end">
