@@ -9,18 +9,18 @@ const faqs = [
       "Fyodoroffers a wide range of services including digital transformation, cloud solutions, AI integration, data analytics, and IT consulting tailored for enterprise needs.",
   },
   {
-    question: "Which industries does Fyodorserve?",
+    question: "Which industries does Fyodor serve?",
     answer:
       "We serve a variety of industries including finance, healthcare, manufacturing, retail, and government sectors, offering specialized solutions for each.",
   },
   {
     question:
-      "What makes Fyodordifferent from other technology consulting firms?",
+      "What makes Fyodor different from other technology consulting firms?",
     answer:
       "Our unique approach blends deep industry expertise, innovative technologies, and a client-first mindset. We focus on measurable outcomes and long-term partnerships.",
   },
   {
-    question: "What measurable outcomes can Fyodordeliver?",
+    question: "What measurable outcomes can Fyodor deliver?",
     answer:
       "We help businesses achieve 150% improvement in operational efficiency, reduce costs, and drive new revenue streams through data-driven decision-making.",
   },
@@ -35,7 +35,7 @@ const faqs = [
       "Schedule a free consultation with our experts. We'll assess your goals and help you determine if our capabilities align with your needs.",
   },
   {
-    question: "How can I get started with AventIQ?",
+    question: "How can I get started with Fyodor?",
     answer:
       "Getting started is easy—just reach out via our contact form, and our team will schedule a discovery session to understand your business objectives.",
   },
