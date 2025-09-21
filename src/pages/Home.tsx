@@ -18,7 +18,9 @@ const Home = () => {
 
         {/* Sections */}
         <Benefits />
-        <PartnerSection />
+        <div className="lg:relative lg:block hidden">
+          <PartnerSection />
+        </div>
         {/* <ChromaBackground /> */}
         <FeatureSection/>
         <Specialities />

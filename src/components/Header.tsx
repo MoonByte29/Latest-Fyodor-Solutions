@@ -1,5 +1,4 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -88,6 +87,7 @@ export default function Header() {
       </Link>
 
       {/* Desktop Nav */}
+      <div className="absolute left-1/2 transform -translate-x-1/2">
       <nav className="hidden md:flex items-center space-x-1 bg-neutral-900/70 px-4 py-2 rounded-full border border-neutral-700 backdrop-blur-md flex-grow-0 mx-4">
         {navItems.map((item, idx) =>
           item.dropdown ? (
@@ -142,6 +142,7 @@ export default function Header() {
           )
         )}
       </nav>
+      </div>
 
       {/* CTA Button (desktop only) */}
       <div className="hidden md:flex flex-shrink-0">

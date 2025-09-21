@@ -2,7 +2,6 @@ import React from "react";
 import { Users, Target, Award, Lightbulb, Heart, Globe } from "lucide-react";
 import AboutSection from "../sections/about/AboutSection";
 import PartnerSection from "../sections/home/PartnerSection";
-import AboutFounder from "../sections/about/AboutFounder";
 import Stages from "../sections/about/Stages";
 import ValuesSection from "../sections/about/ValuesSection";
 import TeamSection from "../sections/about/TeamSection";
@@ -21,10 +20,15 @@ const About = () => {
         />
 
         <AboutSection />
-        <PartnerSection />
-        {/* <AboutFounder /> */}
+        <div className="lg:relative lg:block hidden">
+          <PartnerSection />
+        </div>
+
         <TeamSection />
+        <div className="lg:relative lg:block hidden">
+
         <ValuesSection />
+        </div>
         <Stages />
         <FaqSection />
         <ContactForm />

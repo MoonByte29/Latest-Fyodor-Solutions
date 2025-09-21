@@ -94,10 +94,10 @@ const BlogSection = () => {
                   setActiveCard(null);
                   setShowText(null);
                 }}
-                className={`bg-gradient-to-b from-slate-900/70 to-blue-950/90 backdrop-blur shadow-xl rounded-lg cursor-pointer transition-all duration-700 ease-in-out overflow-hidden border border-blue-700/30 flex flex-col h-[350px] relative ${
+                className={`group bg-slate-800/50 backdrop-blur border border-slate-700/50 hover:border-blue-500/30 rounded-xl cursor-pointer transition-all duration-700 ease-in-out overflow-hidden flex flex-col h-[350px] relative ${
                   isActive
-                    ? "md:flex-[2] "
-                    : "md:flex-[1] "
+                    ? "md:flex-[2] hover:bg-slate-800/70"
+                    : "md:flex-[1] hover:bg-slate-800/70"
                 }`}
                 onTransitionEnd={() => {
                   if (isActive) {
@@ -106,7 +106,7 @@ const BlogSection = () => {
                 }}
               >
                 <div className="p-6 h-full flex flex-col relative">
-                  <h3 className="text-2xl font-bold text-white mb-4 flex-shrink-0 transition-all duration-500 ease-out">
+                  <h3 className="text-2xl font-bold text-white mb-4 flex-shrink-0 transition-all duration-500 ease-out group-hover:text-blue-200">
                     {card.title}
                   </h3>
 
@@ -125,7 +125,7 @@ const BlogSection = () => {
                             : "opacity-100 scale-100 translate-x-0"
                         }`}
                       >
-                        <div className="w-full flex-1 rounded-lg overflow-hidden shadow-lg border border-blue-700/30">
+                        <div className="w-full flex-1 rounded-lg overflow-hidden shadow-lg border border-slate-700/30">
                           <img
                             src={card.image}
                             alt={card.title}
@@ -142,7 +142,7 @@ const BlogSection = () => {
                             : "opacity-0 scale-95 translate-x-2 pointer-events-none absolute inset-0"
                         }`}
                       >
-                        <p className={`text-blue-100/90 mb-4 flex-1 overflow-hidden text-sm leading-relaxed transform transition-all duration-600 ease-out ${
+                        <p className={`text-slate-300 mb-4 flex-1 overflow-hidden text-sm leading-relaxed transform transition-all duration-600 ease-out ${
                           showText === card.id ? "opacity-100 translate-y-0 delay-100" : "opacity-0 translate-y-4"
                         }`}>
                           {truncateText(card.blog, 180)}
@@ -154,12 +154,12 @@ const BlogSection = () => {
                         }`}>
                           <button 
                             onClick={() => handleReadMore(card)}
-                            className="inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 text-sm font-medium transition-colors duration-300 group"
+                            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300 group/btn"
                           >
                             {card.cta} 
                             <ArrowRight 
                               size={16} 
-                              className="transform transition-transform duration-300 group-hover:translate-x-1" 
+                              className="transform transition-transform duration-300 group-hover/btn:translate-x-1" 
                             />
                           </button>
                         </div>
@@ -174,7 +174,7 @@ const BlogSection = () => {
                           : "opacity-0 scale-95 translate-x-4 pointer-events-none absolute"
                       } hidden md:flex`}
                     >
-                      <div className="w-full h-full rounded-lg overflow-hidden shadow-md border border-blue-700/30">
+                      <div className="w-full h-full rounded-lg overflow-hidden shadow-md border border-slate-700/30">
                         <img
                           src={card.image}
                           alt={card.title}
@@ -185,47 +185,17 @@ const BlogSection = () => {
                   </div>
                 </div>
 
-                {/* Glow effect overlay */}
+                {/* Subtle border line at bottom for extra polish */}
                 <div 
-                  className={`absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-400/5 pointer-events-none rounded-lg transition-opacity duration-500 ease-in-out ${
+                  className={`absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent transition-opacity duration-500 ease-in-out ${
                     isActive ? "opacity-100" : "opacity-0"
                   }`}
-                />
-
-                {/* Subtle animated border effect */}
-                <div 
-                  className={`absolute inset-0 rounded-lg transition-all duration-500 ease-in-out ${
-                    isActive 
-                      ? "bg-gradient-to-r from-blue-500/20 via-transparent to-cyan-500/20 opacity-100" 
-                      : "opacity-0"
-                  } pointer-events-none`} 
-                  style={{
-                    background: isActive 
-                      ? "linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.1) 50%, transparent 70%)" 
-                      : "none",
-                    backgroundSize: "200% 200%",
-                    animation: isActive ? "shimmer 3s ease-in-out infinite" : "none"
-                  }}
                 />
               </div>
             );
           })}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes shimmer {
-          0% {
-            background-position: -200% -200%;
-          }
-          50% {
-            background-position: 200% 200%;
-          }
-          100% {
-            background-position: -200% -200%;
-          }
-        }
-      `}</style>
     </div>
 
       {/* Modal */}
