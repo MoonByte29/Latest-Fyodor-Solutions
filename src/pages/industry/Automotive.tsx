@@ -17,8 +17,8 @@ const automotiveProjects = [
       "Flexible production enables quick model customization.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1581093588401-22c3c50fda51",
-      "https://images.unsplash.com/photo-1581091215367-59ab6c9c1a5a",
+      "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg",
+      "https://images.pexels.com/photos/2182863/pexels-photo-2182863.jpeg",
     ],
     color: "#8E44AD",
   },
@@ -32,8 +32,8 @@ const automotiveProjects = [
       "Real-time health monitoring via IoT sensors.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1605902712319-6ff5f3a36c2a",
-      "https://images.unsplash.com/photo-1620912189861-83f49d7e7e2c",
+      "https://images.pexels.com/photos/279949/pexels-photo-279949.jpeg",
+      "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg",
     ],
     color: "#27AE60",
   },
@@ -47,8 +47,8 @@ const automotiveProjects = [
       "Enhanced driver assistance and safety features.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1605902711622-cfb43c44367d",
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4",
+      "https://images.pexels.com/photos/376361/pexels-photo-376361.jpeg",
+      "https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg",
     ],
     color: "#2E86AB",
   },
@@ -62,21 +62,21 @@ const automotiveProjects = [
       "Reduced manual paperwork in import/export processes.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
-      "https://images.unsplash.com/photo-1581092334651-ddf26d9d43a6",
+      "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg",
+      "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg",
     ],
     color: "#F39C12",
   },
 ];
 
-const automotiveAutomationSections = [
+ const automotiveAutomationSections = [
   {
     id: 1,
     title: "Smart Manufacturing",
     description:
       "Implement robotics and AI-driven assembly lines to boost precision, reduce downtime, and accelerate production while ensuring consistent quality.",
     image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/2182863/pexels-photo-2182863.jpeg",
   },
   {
     id: 2,
@@ -84,7 +84,7 @@ const automotiveAutomationSections = [
     description:
       "Leverage IoT and telematics to enable real-time vehicle monitoring, predictive maintenance, and personalized in-car experiences.",
     image:
-      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/193999/pexels-photo-193999.jpeg",
   },
   {
     id: 3,
@@ -92,7 +92,7 @@ const automotiveAutomationSections = [
     description:
       "Integrate advanced driver-assistance systems (ADAS) and self-driving technologies to improve safety, reduce accidents, and transform mobility services.",
     image:
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg",
   },
   {
     id: 4,
@@ -100,10 +100,9 @@ const automotiveAutomationSections = [
     description:
       "Use AI chatbots, predictive analytics, and automated service scheduling to deliver personalized after-sales support and enhance customer satisfaction.",
     image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/4489702/pexels-photo-4489702.jpeg",
   },
 ];
-
 const Automotive = () => {
   return (
     <div className="relative">

@@ -72,7 +72,7 @@ const Card: React.FC<CardProps> = ({
               {/* Title */}
               <div className="text-center">
                 <h1 className="text-3xl font-light text-slate-100 leading-snug tracking-wide mb-2">
-                  {title}
+                  {name}
                 </h1>
                 <div className="w-16 h-0.5 bg-gradient-to-r from-indigo-400 to-violet-400 mx-auto rounded-full" />
               </div>

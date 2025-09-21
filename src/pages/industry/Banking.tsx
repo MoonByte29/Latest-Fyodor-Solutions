@@ -17,8 +17,8 @@ const bankingProjects = [
       "Enhanced security with biometric login.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1591696331110-1b38b8c1a6b3",
-      "https://images.unsplash.com/photo-1581091012184-9d45d6f212e0",
+      "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5",
+      "https://images.unsplash.com/photo-1605902711911-f22e89f5a0b3",
     ],
     color: "#1F618D",
   },
@@ -32,8 +32,8 @@ const bankingProjects = [
       "Reduced financial losses significantly.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1591696330921-2c5e0f6f2d3e",
-      "https://images.unsplash.com/photo-1600185367024-7c1c0e5ed90b",
+      "https://images.unsplash.com/photo-1639754391110-7ec6f64e4e6f",
+      "https://images.unsplash.com/photo-1639754421893-5fcf3d3a8a30",
     ],
     color: "#117A65",
   },
@@ -47,8 +47,8 @@ const bankingProjects = [
       "Higher customer retention and satisfaction.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1591696330934-4c6d9c1e2d12",
-      "https://images.unsplash.com/photo-1600185367020-3d2a2f7c0d7b",
+      "https://images.unsplash.com/photo-1581091870622-9d4a4fbb1e4d",
+      "https://images.unsplash.com/photo-1581091012184-df4a3e5e2e0b",
     ],
     color: "#F39C12",
   },
@@ -61,7 +61,7 @@ const bankingAutomationSections = [
     description:
       "Implement advanced digital platforms to streamline banking operations and enhance customer experience.",
     image:
-      "https://images.unsplash.com/photo-1556742042-3b6338f93b10?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1605902712931-d7b68b8f6f5b?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: 2,
@@ -69,7 +69,7 @@ const bankingAutomationSections = [
     description:
       "Use AI and machine learning to analyze customer behavior, detect fraud, and offer personalized services.",
     image:
-      "https://images.unsplash.com/photo-1556741533-f6acd647d2fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1642690134796-6dd7f8e1b2d9?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: 3,
@@ -77,9 +77,10 @@ const bankingAutomationSections = [
     description:
       "Seamless banking experience across mobile, web, and physical branches.",
     image:
-      "https://images.unsplash.com/photo-1556740772-1a741367b93e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1621939514649-8e4b59d2fbb9?auto=format&fit=crop&w=1200&q=80",
   },
 ];
+
 
 const Banking = () => {
   return (

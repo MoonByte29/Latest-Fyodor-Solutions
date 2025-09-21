@@ -21,7 +21,7 @@ import ScrollToTop from "./hooks/ScrollToTop";
 function App() {
   return (
     <>
-      <div className="min-h-screen w-screen bg-black text-white relative overflow-x-hidden flex flex-col items-center">
+      <div className="min-h-screen w-screen bg-black text-white relative flex flex-col items-center">
         <div
           className="fixed inset-0 z-0"
           style={{
