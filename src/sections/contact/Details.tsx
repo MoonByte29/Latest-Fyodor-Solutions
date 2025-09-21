@@ -34,32 +34,38 @@ const cardData: BentoCardProps[] = [
     color: "#060010",
     title: "+91-7822922933",
     description: "Primary contact number",
-    label: "Leisure",
+    label: "Contact",
   },
   {
     color: "#060010",
-    title: "INDIA Office",
-    description: "BITES, BLOCHE, MOLHAI COOPERATIVE INDUSTRIAL SERVICE",
-    label: "Adverse",
+    title: "India Office",
+    description: "Jaipur, Rajasthan, India",
+    label: "Location",
   },
   {
     color: "#060010",
-    title: "CONTACT/BACKSTRO.AI",
+    title: "Fyodor Consulting Services",
+    description: "Trusted business and technology consulting solutions",
+    label: "Company",
+  },
+  {
+    color: "#060010",
+    title: "info@fyodorsolutions.com",
     description: "Primary email contact",
     label: "Email",
   },
   {
     color: "#060010",
     title: "Operating Hours",
-    description:
-      "MON TO FIB: 9:00AM - 8:30PM | BAT: 0:00AM - 8:30PM | BLIN: 0:03BD",
-    // label: "Genotype Name",
+    description: "Mon - Fri: 9:00 AM - 6:30 PM (IST)",
+    label: "Hours",
   },
   {
     color: "#060010",
     title: "Follow Us",
-    description: "Social media and other connections",
-    label: "Folder Link",
+    description:
+      "LinkedIn: https://www.linkedin.com/company/fyodor-consulting-services",
+    label: "Social",
   },
 ];
 

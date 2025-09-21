@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { ArrowRight, Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -13,7 +14,10 @@ const navItems = [
         name: "AI & Automation Consulting",
         href: "/services/ai-&-automation-consulting",
       },
-      { name: "Opportunity Discovery", href: "/services/opportunity-discovery" },
+      {
+        name: "Opportunity Discovery",
+        href: "/services/opportunity-discovery",
+      },
       {
         name: "Cybersecurity & Compliance",
         href: "/services/cybersecurity-&-compliance-compilance",
@@ -73,11 +77,11 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="relative z-50 flex items-center justify-between px-6 py-4 bg-transparent">
+    <header className="relative z-50 flex items-center justify-between px-4 sm:px-6 py-4 bg-transparent w-full max-w-7xl mx-auto">
       {/* Logo */}
       <Link
         to="/"
-        className="flex items-center space-x-2 text-xl md:text-2xl font-bold"
+        className="flex items-center space-x-2 text-xl md:text-2xl font-bold flex-shrink-0"
       >
         <img
           src={logo}
@@ -91,30 +95,34 @@ export default function Header() {
       </Link>
 
       {/* Desktop Nav */}
-      <nav className="hidden md:flex items-center space-x-6 bg-neutral-900/70 px-6 py-2 rounded-full border border-neutral-700 backdrop-blur-md">
+      <nav className="hidden md:flex items-center space-x-1 bg-neutral-900/70 px-4 py-2 rounded-full border border-neutral-700 backdrop-blur-md flex-grow-0 mx-4">
         {navItems.map((item, idx) =>
           item.dropdown ? (
-            <div key={idx} className="relative">
+            <div
+              key={idx}
+              className="relative"
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
                 onClick={(e) => {
-                  e.stopPropagation(); // stop bubbling
+                  e.stopPropagation();
                   setOpenDropdown(
                     openDropdown === item.name ? null : item.name
                   );
                 }}
-                className="flex items-center gap-1 px-3 py-1 text-sm text-neutral-300 hover:text-white"
+                className="flex items-center gap-1 px-3 py-1 text-sm text-neutral-300 hover:text-white whitespace-nowrap"
                 aria-expanded={openDropdown === item.name}
               >
                 {item.name} <ChevronDown size={14} />
               </button>
               {openDropdown === item.name && (
-                <div className="absolute top-full mt-2 left-0 min-w-[200px] bg-neutral-900 border border-neutral-700 rounded-lg shadow-lg p-3 space-y-2">
+                <div className="absolute top-full mt-2 left-0 min-w-[200px] bg-neutral-900 border border-neutral-700 rounded-lg shadow-lg p-3 space-y-2 z-50">
                   {item.dropdown.map((sub, i) => (
                     <Link
                       key={i}
                       to={sub.href}
                       onClick={() => setOpenDropdown(null)}
-                      className={`block px-3 py-1 text-sm rounded ${
+                      className={`block px-3 py-1 text-sm rounded whitespace-nowrap ${
                         location.pathname === sub.href
                           ? "text-blue-400 font-medium"
                           : "text-neutral-300 hover:text-white"
@@ -130,7 +138,7 @@ export default function Header() {
             <Link
               key={idx}
               to={item.href}
-              className={`px-3 py-1 text-sm rounded ${
+              className={`px-3 py-1 text-sm rounded whitespace-nowrap ${
                 location.pathname === item.href
                   ? "text-blue-400 font-medium"
                   : "text-neutral-300 hover:text-white"
@@ -143,10 +151,16 @@ export default function Header() {
       </nav>
 
       {/* CTA Button (desktop only) */}
-      <div className="hidden md:flex">
+      <div className="hidden md:flex flex-shrink-0">
         <HashLink
           to="/contact#contact-form"
-          className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md"
+          scroll={(el) => {
+            const yOffset = -80; // Adjust for header height
+            const y =
+              el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }}
+          className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md whitespace-nowrap"
         >
           Get Started <ArrowRight size={16} />
         </HashLink>
@@ -154,7 +168,7 @@ export default function Header() {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden text-white"
+        className="md:hidden text-white flex-shrink-0"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Menu"
       >
@@ -163,10 +177,14 @@ export default function Header() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-neutral-900 border-t border-neutral-700 py-6 flex flex-col items-center space-y-4 md:hidden transition-all duration-300 ease-in-out">
+        <div className="absolute top-full left-0 w-full bg-neutral-900 border-t border-neutral-700 py-6 flex flex-col items-center space-y-4 md:hidden transition-all duration-300 ease-in-out z-50">
           {navItems.map((item, idx) =>
             item.dropdown ? (
-              <div key={idx} className="w-full text-center">
+              <div
+                key={idx}
+                className="w-full text-center"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
@@ -174,7 +192,7 @@ export default function Header() {
                       mobileOpenDropdown === item.name ? null : item.name
                     );
                   }}
-                  className="text-white text-sm hover:text-blue-400 flex justify-center items-center gap-1 md:mx-20 sm:mx-5"
+                  className="text-white text-sm hover:text-blue-400 flex justify-center items-center gap-1 w-full"
                 >
                   {item.name} <ChevronDown size={14} />
                 </button>
@@ -216,9 +234,13 @@ export default function Header() {
             )
           )}
 
-          <button className="flex items-center gap-2 bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-neutral-200 mt-2">
+          <HashLink
+            to="/contact#contact-form"
+            className="flex items-center gap-2 bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-neutral-200 mt-2"
+            onClick={() => setIsOpen(false)}
+          >
             Get Started <ArrowRight size={16} />
-          </button>
+          </HashLink>
         </div>
       )}
     </header>

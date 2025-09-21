@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import BlogModal from "./BlogModal";
 
 const BlogSection = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  const [showText, setShowText] = useState<number | null>(null);
+  const [selectedBlog, setSelectedBlog] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const cards = [
     {
@@ -12,7 +15,7 @@ const BlogSection = () => {
       blog: "Agentic AI represents a transformative evolution in artificial intelligence, offering unprecedented autonomy in task execution. This technology is becoming the driving force behind modern automation across industries, enabling systems to perform complex tasks and make decisions based on real-time data analysis.",
       cta: "Read more",
       image:
-        "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1674027444485-cec3da58eef4",
       url: "/blogs/future-of-agentic-ai",
     },
     {
@@ -44,8 +47,19 @@ const BlogSection = () => {
     return truncated.slice(0, lastSpaceIndex) + "...";
   };
 
+  const handleReadMore = (card: any) => {
+    setSelectedBlog(card);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedBlog(null);
+  };
+
   return (
-    <div className="min-h-screen py-12 px-4 overflow-hidden  relative">
+    <>
+      <div className="min-h-screen py-12 px-4 overflow-hidden relative">
       <div className="max-w-6xl md:mx-auto sm:mx-5 relative z-10">
         <div className="flex flex-col items-center mb-16">
           <div className="min-w-fit border border-white/30 rounded-full px-6 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-8">
@@ -67,6 +81,7 @@ const BlogSection = () => {
             from our team.
           </p>
         </div>
+
         {/* Cards */}
         <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
           {cards.map((card) => {
@@ -75,94 +90,147 @@ const BlogSection = () => {
               <div
                 key={card.id}
                 onMouseEnter={() => setActiveCard(card.id)}
-                onMouseLeave={() => setActiveCard(null)}
-                className={`bg-gradient-to-b from-slate-900/70 to-blue-950/90 backdrop-blur shadow-xl rounded-lg cursor-pointer transition-all duration-500 ease-in-out overflow-hidden border border-blue-700/30 flex flex-col h-[350px] ${
+                onMouseLeave={() => {
+                  setActiveCard(null);
+                  setShowText(null);
+                }}
+                className={`bg-gradient-to-b from-slate-900/70 to-blue-950/90 backdrop-blur shadow-xl rounded-lg cursor-pointer transition-all duration-700 ease-in-out overflow-hidden border border-blue-700/30 flex flex-col h-[350px] relative ${
                   isActive
-                    ? "md:flex-[2] shadow-sm shadow-blue-500/30 border-blue-500/50"
+                    ? "md:flex-[2] "
                     : "md:flex-[1] "
                 }`}
+                onTransitionEnd={() => {
+                  if (isActive) {
+                    setTimeout(() => setShowText(card.id), 100);
+                  }
+                }}
               >
-                <div className="p-6 h-full flex flex-col">
-                  <h3 className="text-2xl font-bold text-white mb-4 flex-shrink-0">
+                <div className="p-6 h-full flex flex-col relative">
+                  <h3 className="text-2xl font-bold text-white mb-4 flex-shrink-0 transition-all duration-500 ease-out">
                     {card.title}
                   </h3>
 
-                  <div className="flex flex-col md:flex-row gap-4 flex-1 min-h-0">
+                  <div className="flex flex-col md:flex-row gap-4 flex-1 min-h-0 relative">
                     {/* Content area */}
                     <div
-                      className={`flex flex-col flex-1 min-h-0 ${
+                      className={`flex flex-col flex-1 min-h-0 transition-all duration-700 ease-in-out ${
                         isActive ? "md:w-1/2" : "w-full"
                       }`}
                     >
-                      {isActive ? (
-                        <>
-                          <p className="text-blue-100/90 mb-4 flex-1 overflow-hidden text-sm leading-relaxed">
-                            {truncateText(card.blog, 180)}
-                          </p>
-                          {/* <div className="flex-shrink-0">
-                            <Link
-                              to={card.url}
-                              className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200"
-                            >
-                              Read More
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"
-                              >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
-                            </Link>
-                          </div> */}
-                        </>
-                      ) : (
-                        <div className="flex flex-col items-center justify-center flex-1">
-                          <div className="w-full flex-1 rounded-lg overflow-hidden shadow-lg border border-blue-700/30">
-                            <img
-                              src={card.image}
-                              alt={card.title}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Image area - only visible when expanded */}
-                    {isActive && (
-                      <div className="flex-1 md:w-1/2 flex items-center justify-center min-h-0">
-                        <div className="w-full h-full rounded-lg overflow-hidden shadow-md border border-blue-700/30">
+                      {/* Default state - Image only */}
+                      <div
+                        className={`flex flex-col items-center justify-center flex-1 transition-all duration-500 ease-in-out ${
+                          isActive 
+                            ? "opacity-0 scale-95 -translate-x-2 pointer-events-none absolute inset-0" 
+                            : "opacity-100 scale-100 translate-x-0"
+                        }`}
+                      >
+                        <div className="w-full flex-1 rounded-lg overflow-hidden shadow-lg border border-blue-700/30">
                           <img
                             src={card.image}
                             alt={card.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-transform duration-700 ease-out"
                           />
                         </div>
                       </div>
-                    )}
+
+                      {/* Active state - Text content */}
+                      <div
+                        className={`flex flex-col flex-1 min-h-0 transition-all duration-500 ease-out ${
+                          showText === card.id
+                            ? "opacity-100 scale-100 translate-x-0" 
+                            : "opacity-0 scale-95 translate-x-2 pointer-events-none absolute inset-0"
+                        }`}
+                      >
+                        <p className={`text-blue-100/90 mb-4 flex-1 overflow-hidden text-sm leading-relaxed transform transition-all duration-600 ease-out ${
+                          showText === card.id ? "opacity-100 translate-y-0 delay-100" : "opacity-0 translate-y-4"
+                        }`}>
+                          {truncateText(card.blog, 180)}
+                        </p>
+                        
+                        {/* Read more button */}
+                        <div className={`mt-auto transition-all duration-600 ease-out ${
+                          showText === card.id ? "opacity-100 translate-y-0 delay-300" : "opacity-0 translate-y-2"
+                        }`}>
+                          <button 
+                            onClick={() => handleReadMore(card)}
+                            className="inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 text-sm font-medium transition-colors duration-300 group"
+                          >
+                            {card.cta} 
+                            <ArrowRight 
+                              size={16} 
+                              className="transform transition-transform duration-300 group-hover:translate-x-1" 
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Image area - only visible when expanded */}
+                    <div
+                      className={`flex-1 md:w-1/2 flex items-center justify-center min-h-0 transition-all duration-600 ease-out ${
+                        isActive 
+                          ? "opacity-100 scale-100 translate-x-0 delay-300" 
+                          : "opacity-0 scale-95 translate-x-4 pointer-events-none absolute"
+                      } hidden md:flex`}
+                    >
+                      <div className="w-full h-full rounded-lg overflow-hidden shadow-md border border-blue-700/30">
+                        <img
+                          src={card.image}
+                          alt={card.title}
+                          className="w-full h-full object-cover transition-all duration-700 ease-out hover:scale-105"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 {/* Glow effect overlay */}
-                {isActive && (
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-400/5 pointer-events-none rounded-lg"></div>
-                )}
+                <div 
+                  className={`absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-400/5 pointer-events-none rounded-lg transition-opacity duration-500 ease-in-out ${
+                    isActive ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+
+                {/* Subtle animated border effect */}
+                <div 
+                  className={`absolute inset-0 rounded-lg transition-all duration-500 ease-in-out ${
+                    isActive 
+                      ? "bg-gradient-to-r from-blue-500/20 via-transparent to-cyan-500/20 opacity-100" 
+                      : "opacity-0"
+                  } pointer-events-none`} 
+                  style={{
+                    background: isActive 
+                      ? "linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.1) 50%, transparent 70%)" 
+                      : "none",
+                    backgroundSize: "200% 200%",
+                    animation: isActive ? "shimmer 3s ease-in-out infinite" : "none"
+                  }}
+                />
               </div>
             );
           })}
         </div>
-        {/* <div className="w-full flex justify-end mt-6">
-          <button className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md">
-            Read More <ArrowRight size={16} />
-          </button>
-        </div> */}
       </div>
+
+      <style jsx>{`
+        @keyframes shimmer {
+          0% {
+            background-position: -200% -200%;
+          }
+          50% {
+            background-position: 200% 200%;
+          }
+          100% {
+            background-position: -200% -200%;
+          }
+        }
+      `}</style>
     </div>
+
+      {/* Modal */}
+      <BlogModal isOpen={isModalOpen} onClose={closeModal} blog={selectedBlog} />
+    </>
   );
 };
 

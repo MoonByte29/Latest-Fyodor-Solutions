@@ -11,6 +11,7 @@ import ContactForm from "../sections/contact/ContactForm";
 import Testimonial from "../sections/home/Testimonial";
 import FaqSection from "../sections/contact/FaqSection";
 import Hero from "../sections/home/Hero";
+import FeatureSection from "../sections/home/FeatureSection";
 
 const Home = () => {
   return (
@@ -22,7 +23,8 @@ const Home = () => {
         {/* Sections */}
         <Benefits />
         <PartnerSection />
-        <ChromaBackground />
+        {/* <ChromaBackground /> */}
+        <FeatureSection/>
         <Specialities />
         <BlogSection />
         <Testimonial />
