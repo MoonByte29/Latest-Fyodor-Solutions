@@ -69,7 +69,6 @@ export default function Header() {
     }
     document.addEventListener("click", handleClickOutside);
     document.addEventListener("keydown", handleEscape);
-
     return () => {
       document.removeEventListener("click", handleClickOutside);
       document.removeEventListener("keydown", handleEscape);
@@ -77,100 +76,114 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="relative z-50 flex items-center justify-between px-4 sm:px-6 py-4 bg-transparent w-full max-w-7xl mx-auto">
-      {/* Logo */}
-      <Link to="/" className="flex items-center flex-shrink-0">
-        <img
-          src={logo}
-          alt="Fyodor Solutions Logo"
-          className="h-12 w-12 md:h-24 md:w-24 object-contain absolute"
-        />
-      </Link>
+    <header className="relative z-50 px-4 sm:px-6 py-4 bg-transparent w-full max-w-7xl mx-auto">
+      {/* Desktop Header */}
+      <div className="hidden md:grid grid-cols-3 items-center">
+        {/* Left - Logo */}
+        <div className="flex justify-start">
+          <Link to="/" className="flex items-center flex-shrink-0">
+            <img
+              src={logo}
+              alt="Fyodor Solutions Logo"
+              className="h-12 w-12 md:h-24 md:w-24 object-contain"
+            />
+          </Link>
+        </div>
 
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex items-center space-x-1 bg-neutral-900/70 px-4 py-2 rounded-full border border-neutral-700 backdrop-blur-md flex-grow-0 mx-4">
-        {navItems.map((item, idx) =>
-          item.dropdown ? (
-            <div
-              key={idx}
-              className="relative"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setOpenDropdown(
-                    openDropdown === item.name ? null : item.name
-                  );
-                }}
-                className="flex items-center gap-1 px-3 py-1 text-sm text-neutral-300 hover:text-white whitespace-nowrap"
-                aria-expanded={openDropdown === item.name}
+        {/* Center - Navigation */}
+        <nav className="flex justify-center items-center space-x-1 bg-neutral-900/70 px-4 py-2 rounded-full border border-neutral-700 backdrop-blur-md">
+          {navItems.map((item, idx) =>
+            item.dropdown ? (
+              <div
+                key={idx}
+                className="relative"
+                onClick={(e) => e.stopPropagation()}
               >
-                {item.name} <ChevronDown size={14} />
-              </button>
-              {openDropdown === item.name && (
-                <div className="absolute top-full mt-2 left-0 min-w-[200px] bg-neutral-900 border border-neutral-700 rounded-lg shadow-lg p-3 space-y-2 z-50">
-                  {item.dropdown.map((sub, i) => (
-                    <Link
-                      key={i}
-                      to={sub.href}
-                      onClick={() => setOpenDropdown(null)}
-                      className={`block px-3 py-1 text-sm rounded whitespace-nowrap ${
-                        location.pathname === sub.href
-                          ? "text-blue-400 font-medium"
-                          : "text-neutral-300 hover:text-white"
-                      }`}
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ) : (
-            <Link
-              key={idx}
-              to={item.href}
-              className={`px-3 py-1 text-sm rounded whitespace-nowrap ${
-                location.pathname === item.href
-                  ? "text-blue-400 font-medium"
-                  : "text-neutral-300 hover:text-white"
-              }`}
-            >
-              {item.name}
-            </Link>
-          )
-        )}
-      </nav>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setOpenDropdown(
+                      openDropdown === item.name ? null : item.name
+                    );
+                  }}
+                  className="flex items-center gap-1 px-3 py-1 text-sm text-neutral-300 hover:text-white whitespace-nowrap"
+                  aria-expanded={openDropdown === item.name}
+                >
+                  {item.name} <ChevronDown size={14} />
+                </button>
+                {openDropdown === item.name && (
+                  <div className="absolute top-full mt-2 left-0 min-w-[200px] bg-neutral-900 border border-neutral-700 rounded-lg shadow-lg p-3 space-y-2 z-50">
+                    {item.dropdown.map((sub, i) => (
+                      <Link
+                        key={i}
+                        to={sub.href}
+                        onClick={() => setOpenDropdown(null)}
+                        className={`block px-3 py-1 text-sm rounded whitespace-nowrap ${
+                          location.pathname === sub.href
+                            ? "text-blue-400 font-medium"
+                            : "text-neutral-300 hover:text-white"
+                        }`}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={idx}
+                to={item.href}
+                className={`px-3 py-1 text-sm rounded whitespace-nowrap ${
+                  location.pathname === item.href
+                    ? "text-blue-400 font-medium"
+                    : "text-neutral-300 hover:text-white"
+                }`}
+              >
+                {item.name}
+              </Link>
+            )
+          )}
+        </nav>
 
-      {/* CTA Button (desktop only) */}
-      <div className="hidden md:flex flex-shrink-0">
-        <HashLink
-          to="/contact#contact-form"
-          scroll={(el) => {
-            const yOffset = -80; // Adjust for header height
-            const y =
-              el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: "smooth" });
-          }}
-          className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md whitespace-nowrap"
-        >
-          Get Started <ArrowRight size={16} />
-        </HashLink>
+        {/* Right - CTA Button */}
+        <div className="flex justify-end">
+          <HashLink
+            to="/contact#contact-form"
+            scroll={(el) => {
+              const yOffset = -80; // Adjust for header height
+              const y =
+                el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }}
+            className="flex items-center gap-2 bg-neutral-900 border border-neutral-700 px-4 py-2 rounded-full hover:bg-neutral-800 text-sm backdrop-blur-md whitespace-nowrap"
+          >
+            Get Started <ArrowRight size={16} />
+          </HashLink>
+        </div>
       </div>
 
-      {/* Mobile Menu Button */}
-      <button
-        className="md:hidden text-white flex-shrink-0"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle Menu"
-      >
-        {isOpen ? <X size={28} /> : <Menu size={28} />}
-      </button>
+      {/* Mobile Header */}
+      <div className="md:hidden flex items-center justify-between">
+        <Link to="/" className="flex items-center flex-shrink-0">
+          <img
+            src={logo}
+            alt="Fyodor Solutions Logo"
+            className="h-12 w-12 object-contain"
+          />
+        </Link>
+        <button
+          className="text-white flex-shrink-0"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-neutral-900 border-t border-neutral-700 py-6 flex flex-col items-center space-y-4 md:hidden transition-all duration-300 ease-in-out z-50">
+        <div className="md:hidden fixed top-16 left-0 w-full bg-neutral-900 border-t border-neutral-700 py-6 flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out z-[100]">
           {navItems.map((item, idx) =>
             item.dropdown ? (
               <div
