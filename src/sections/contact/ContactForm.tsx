@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_CONFIG, EmailTemplateParams } from "../../lib/emailjs";
 import { CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 
 interface FormData {
   name: string;

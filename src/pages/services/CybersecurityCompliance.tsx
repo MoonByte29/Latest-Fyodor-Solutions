@@ -12,11 +12,15 @@ import {
   Zap,
   Headphones,
   Briefcase,
+  TrendingUp,
+  Target,
+  BarChart,
 } from "lucide-react";
 
 import ContactForm from "../../sections/contact/ContactForm";
 import PartnerSection from "../../sections/home/PartnerSection";
 import FaqSection from "../../sections/contact/FaqSection";
+import HeaderSection from "../../components/HeaderSection";
 
 const CybersecurityCompliance = () => {
   const services = [
@@ -96,40 +100,47 @@ const CybersecurityCompliance = () => {
       <section className="relative max-w-6xl md:mx-auto sm:mx-5 flex flex-col items-center justify-center min-h-screen text-white">
         {/* Hero */}
         <div className="flex flex-col items-center justify-center min-h-screen text-white py-20 px-4">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-8 inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-gradient-to-r from-blue-500/10 to-violet-500/10 backdrop-blur-sm"
-          >
-            <span className="h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
-            <span className="text-white/80 text-sm font-medium tracking-wide uppercase">
-              Cybersecurity & Compliance
-            </span>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center max-w-5xl px-6 mb-12"
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-              <span className="text-white">Cybersecurity & Compliance </span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400">
-                for Digital & AI Systems
-              </span>
-            </h1>
-
-            <p className="text-slate-300 text-xl md:text-2xl max-w-3xl md:mx-auto sm:mx-5 mb-10">
-              AI, automation, and digital systems introduce new layers of
+          <HeaderSection
+            title="Cybersecurity & Compliance"
+            highlight="for Digital & AI Systems"
+            subtitle="AI, automation, and digital systems introduce new layers of
               complexity and risk — from data pipelines to cloud interfaces.
               Fyodor embeds security and compliance at the core of every
-              deployment.
-            </p>
+              deployment."
+          />
+          {/* Stats Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl w-full"
+          >
+            {[
+              {
+                value: "40%",
+                label: "Average Efficiency Gain",
+                icon: TrendingUp,
+              },
+              { value: "200+", label: "AI Projects Deployed", icon: Target },
+              { value: "98%", label: "Client Satisfaction", icon: Users },
+              { value: "3.2x", label: "Average ROI", icon: BarChart },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-500"
+              >
+                <div className="flex justify-center mb-3">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500/20 to-violet-500/20">
+                    <stat.icon size={24} className="text-blue-400" />
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-1">
+                  {stat.value}
+                </h3>
+                <p className="text-slate-300 text-sm">{stat.label}</p>
+              </div>
+            ))}
           </motion.div>
         </div>
 
