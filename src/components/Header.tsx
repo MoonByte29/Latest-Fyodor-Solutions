@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { ArrowRight, Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 const navItems = [
   { name: "About", href: "/about" },
@@ -79,19 +79,12 @@ export default function Header() {
   return (
     <header className="relative z-50 flex items-center justify-between px-4 sm:px-6 py-4 bg-transparent w-full max-w-7xl mx-auto">
       {/* Logo */}
-      <Link
-        to="/"
-        className="flex items-center space-x-2 text-xl md:text-2xl font-bold flex-shrink-0"
-      >
+      <Link to="/" className="flex items-center flex-shrink-0">
         <img
           src={logo}
           alt="Fyodor Solutions Logo"
-          className="h-8 w-8 md:h-10 md:w-10 object-contain"
+          className="h-12 w-12 md:h-24 md:w-24 object-contain absolute"
         />
-        <span className="text-white">Fyodor</span>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
-          Solutions
-        </span>
       </Link>
 
       {/* Desktop Nav */}

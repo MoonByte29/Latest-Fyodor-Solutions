@@ -34,8 +34,7 @@ const Footer = () => {
             <div className="flex items-start space-x-3 bg-slate-800/50 rounded-lg p-4">
               <MapPin className="w-5 h-5 text-blue-400 mt-1" />
               <span className="text-slate-300 text-sm leading-relaxed">
-                <strong>INDIA:</strong> B1/E13, Block E, Mohan Cooperative
-                Industrial Estate, Badarpur, New Delhi, 110044, India
+                <strong>INDIA:</strong> Jaipur,Rajasthan, India
               </span>
             </div>
           </div>
@@ -79,7 +78,7 @@ const Footer = () => {
                   <Link
                     to={`/services/${service
                       .toLowerCase()
-                      .replace(/\s+/g, "-")}`} 
+                      .replace(/\s+/g, "-")}`}
                     className="block text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
                   >
                     {service}
@@ -93,57 +92,24 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold mb-4">Industry</h3>
             <ul className="space-y-2">
-              {[
-                "Automotive",
-                "Healthcare",
-                "Finance",
-                "Government",
-                "Construction",
-                "Retail",
-              ].map((industry, idx) => (
-                <li key={idx}>
-                  <Link
-                    to={`/industry/${industry.toLowerCase()}`}
-                    className="block text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
-                  >
-                    {industry}
-                  </Link>
-                </li>
-              ))}
+              {["Banking", "Automotive", "Insurance", "Finance"].map(
+                (industry, idx) => (
+                  <li key={idx}>
+                    <Link
+                      to={`/industry/${industry.toLowerCase()}`}
+                      className="block text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
+                    >
+                      {industry}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-slate-800 mt-10 pt-8 flex flex-col items-center space-y-6">
-          {/* Social Icons */}
-          {/* <div className="flex space-x-4">
-            <a
-              href="#"
-              className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
-            >
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-blue-400 transition-colors"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
-          </div> */}
-
           {/* Newsletter */}
           <form className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-3">
             <input
