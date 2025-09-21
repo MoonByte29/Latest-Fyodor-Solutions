@@ -3,10 +3,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -46,7 +42,6 @@ const Footer = () => {
               {[
                 { label: "Home", path: "/" },
                 { label: "About", path: "/about" },
-                { label: "Industry", path: "/industry" },
                 { label: "Contact", path: "/contact" },
               ].map((item, idx) => (
                 <li key={idx}>
