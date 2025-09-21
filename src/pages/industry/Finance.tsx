@@ -7,7 +7,7 @@ import Testimonial from "../../sections/home/Testimonial";
 import ContactForm from "../../sections/contact/ContactForm";
 
 const financeProjects = [
-  {
+{
     title: "AI Investment Analysis",
     description:
       "Leverage AI to identify profitable investment opportunities and manage portfolio risk.",
@@ -17,8 +17,8 @@ const financeProjects = [
       "Real-time market monitoring for informed decisions.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1556741533-f6acd647d2fb",
-      "https://images.unsplash.com/photo-1556742042-3b6338f93b10",
+      "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg",
+      "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg",
     ],
     color: "#2E86AB",
   },
@@ -32,8 +32,8 @@ const financeProjects = [
       "Enhanced security and transparency.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1600185367024-7c1c0e5ed90b",
-      "https://images.unsplash.com/photo-1600185367020-3d2a2f7c0d7b",
+      "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg",
+      "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg",
     ],
     color: "#E67E22",
   },
@@ -47,8 +47,8 @@ const financeProjects = [
       "Predictive insights increase goal achievement.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1581091012184-9d45d6f212e0",
-      "https://images.unsplash.com/photo-1581092334651-ddf26d9d43a6",
+      "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg",
+      "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg",
     ],
     color: "#16A085",
   },
@@ -60,24 +60,21 @@ const financeSections = [
     title: "AI Investment Tools",
     description:
       "Automated analysis and insights to optimize investment strategies.",
-    image:
-      "https://images.unsplash.com/photo-1591696331110-1b38b8c1a6b3?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg",
   },
   {
     id: 2,
     title: "Blockchain Payments",
     description:
       "Secure and efficient transactions using blockchain technologies.",
-    image:
-      "https://images.unsplash.com/photo-1600185367020-3d2a2f7c0d7b?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg",
   },
   {
     id: 3,
     title: "Personal Finance Management",
     description:
       "AI-powered tools provide personalized insights for budgeting and investments.",
-    image:
-      "https://images.unsplash.com/photo-1556740772-1a741367b93e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg",
   },
 ];
 

@@ -81,14 +81,33 @@ export default function Header() {
       <div className="hidden md:grid grid-cols-3 items-center">
         {/* Left - Logo */}
         <div className="flex justify-start">
-          <Link to="/" className="flex items-center flex-shrink-0">
-            <img
-              src={logo}
-              alt="Fyodor Solutions Logo"
-              className="h-12 w-12 md:h-24 md:w-24 object-contain"
-            />
-          </Link>
-        </div>
+  <Link
+    to="/"
+    className="group flex items-center flex-shrink-0 space-x-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md transition"
+  >
+    {/* Logo */}
+    <img
+      src={logo}
+      alt="Fyodor Solutions Logo"
+      className="h-12 w-12 md:h-24 md:w-24 object-contain transform group-hover:scale-105 transition-transform duration-300"
+    />
+
+    {/* Text block */}
+    <span className="flex flex-col">
+      <span className="font-semibold text-white/80 text-base md:text-lg">
+        Fyodor {" "}
+      {/* </span>
+      <span className="font-semibold text-white/80 text-base md:text-lg "> */}
+        Consultancy Services
+      </span>
+      {/* Optional small tagline */}
+      <span className="hidden sm:block text-sm text-gray-500">
+        Transforming ideas into reality
+      </span>
+    </span>
+  </Link>
+</div>
+
 
         {/* Center - Navigation */}
         <nav className="flex justify-center items-center space-x-1 bg-neutral-900/70 px-4 py-2 rounded-full border border-neutral-700 backdrop-blur-md">

@@ -17,8 +17,8 @@ const insuranceProjects = [
       "AI-assisted claim validation ensures accuracy.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1581092334651-ddf26d9d43a6",
-      "https://images.unsplash.com/photo-1581093588401-22c3c50fda51",
+      "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg",
+      "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg",
     ],
     color: "#16A085",
   },
@@ -32,8 +32,8 @@ const insuranceProjects = [
       "Real-time risk analysis for policy customization.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1600185367020-3d2a2f7c0d7b",
-      "https://images.unsplash.com/photo-1600185367024-7c1c0e5ed90b",
+      "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg",
+      "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg",
     ],
     color: "#E67E22",
   },
@@ -47,8 +47,8 @@ const insuranceProjects = [
       "Higher customer satisfaction and loyalty.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1556742042-3b6338f93b10",
-      "https://images.unsplash.com/photo-1556741533-f6acd647d2fb",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg",
     ],
     color: "#2980B9",
   },
@@ -60,27 +60,23 @@ const insuranceSections = [
     title: "Digital Claims",
     description:
       "Streamline claims processing with automated workflows and AI-assisted validation.",
-    image:
-      "https://images.unsplash.com/photo-1581091012184-9d45d6f212e0?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg",
   },
   {
     id: 2,
     title: "AI Risk Assessment",
     description:
       "Predictive models enhance risk assessment and pricing for insurance policies.",
-    image:
-      "https://images.unsplash.com/photo-1600185367024-7c1c0e5ed90b?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg",
   },
   {
     id: 3,
     title: "Customer Engagement",
     description:
       "AI chatbots and automated notifications increase engagement and retention.",
-    image:
-      "https://images.unsplash.com/photo-1556740772-1a741367b93e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
   },
 ];
-
 const Insurance = () => {
   return (
     <div className="relative">

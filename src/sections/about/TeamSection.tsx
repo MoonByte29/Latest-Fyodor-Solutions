@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../components/Card";
-import Akash from "../../assets/Akash Singhal.jpg";
+import Akash from "../../assets/Akash Singhal.png";
 import Utkarsh from "../../assets/Utkarsh.png";
 
 const teamMembers = [
