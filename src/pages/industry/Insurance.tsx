@@ -1,7 +1,8 @@
 import React from "react";
 import StackCards from "../../components/StackCards";
 import ScrollAnimatedCards from "../../components/ScrollAnimatedCards";
-import { Award } from "lucide-react";
+import { Award, BarChart, Target, TrendingUp, Users } from "lucide-react";
+import { motion } from "framer-motion";
 import HeaderSection from "../../components/HeaderSection";
 import Testimonial from "../../sections/home/Testimonial";
 import ContactForm from "../../sections/contact/ContactForm";
@@ -85,6 +86,41 @@ const Insurance = () => {
         highlight="Insurance Industry"
         subtitle="Discover AI-powered risk assessment, digital claims, and enhanced customer engagement."
       />
+      <div className="flex justify-center items-center mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl w-full"
+        >
+          {[
+            {
+              value: "40%",
+              label: "Average Efficiency Gain",
+              icon: TrendingUp,
+            },
+            { value: "200+", label: "AI Projects Deployed", icon: Target },
+            { value: "98%", label: "Client Satisfaction", icon: Users },
+            { value: "3.2x", label: "Average ROI", icon: BarChart },
+          ].map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-500"
+            >
+              <div className="flex justify-center mb-3">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500/20 to-violet-500/20">
+                  <stat.icon size={24} className="text-blue-400" />
+                </div>
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-1">
+                {stat.value}
+              </h3>
+              <p className="text-slate-300 text-sm">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
       <StackCards
         label="WHY"
         title="Insurance Innovation"
