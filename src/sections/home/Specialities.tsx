@@ -7,13 +7,15 @@ const Specialities = () => {
       <div className="max-w-6xl md:mx-auto sm:mx-5">
         {/* Header - Made responsive */}
         <div className="flex flex-col md:items-start mb-8 md:mb-16">
-          <div className="min-w-fit border border-white/30 rounded-full px-4 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-4 md:mb-6">
+          {/* Capsule */}
+          <div className="min-w-fit self-start border border-white/30 rounded-full px-4 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-4 md:mb-6">
             <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
-            <span className="text-white text-xs md:text-sm font-medium tracking-wider">
+            <span className="text-white text-xs font-medium tracking-wider">
               WHY US
             </span>
           </div>
 
+          {/* Title */}
           <h2 className="text-left md:text-center font-bold text-white text-xl md:text-2xl lg:text-4xl xl:text-5xl leading-tight mb-4 md:mb-6">
             Discover the Specialties of{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
@@ -21,6 +23,7 @@ const Specialities = () => {
             </span>
           </h2>
 
+          {/* Description */}
           <p className="text-left text-slate-300 text-base md:text-lg max-w-2xl">
             Delivering innovation through expertise and excellence
           </p>
@@ -54,7 +57,9 @@ const Specialities = () => {
             <div className="absolute inset-0 bg-green-800/50"></div>
 
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-2">150%</h3>
+              <h3 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-2">
+                150%
+              </h3>
               <h4 className="text-sm md:text-lg lg:text-xl font-semibold mb-3 md:mb-4">
                 EFFICIENCY IMPROVEMENT
               </h4>
@@ -68,7 +73,9 @@ const Specialities = () => {
 
           {/* Top Right - Revenue Impact */}
           <div className="bg-gradient-to-br from-blue-100 to-blue-200 border border-blue-300/30 rounded-xl p-4 md:p-6 text-gray-800 flex flex-col justify-center min-h-[250px] md:min-h-[300px] lg:h-[400px]">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-blue-900">$12M</h3>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-blue-900">
+              $12M
+            </h3>
             <h4 className="text-sm md:text-base lg:text-lg font-semibold mb-3 text-blue-800">
               REVENUE IMPACT
             </h4>
@@ -86,7 +93,9 @@ const Specialities = () => {
           <div className="bg-gradient-to-br from-orange-900/80 to-red-800/60 backdrop-blur-sm border border-orange-500/30 rounded-xl p-4 md:p-6 text-white relative overflow-hidden flex flex-col justify-center min-h-[200px] md:min-h-[250px] lg:h-[400px]">
             <div className="relative z-10">
               <div className="mb-3 md:mb-4"></div>
-              <h4 className="text-sm md:text-base lg:text-lg font-semibold mb-3">CUSTOM SOLUTIONS</h4>
+              <h4 className="text-sm md:text-base lg:text-lg font-semibold mb-3">
+                CUSTOM SOLUTIONS
+              </h4>
               <p className="text-orange-100 text-xs md:text-sm">
                 Tailored technology solutions designed specifically for your
                 unique business requirements and challenges.
@@ -96,7 +105,9 @@ const Specialities = () => {
 
           {/* Bottom Right - Enhanced Brand Visibility */}
           <div className="bg-gradient-to-br from-orange-400 to-red-400 rounded-xl p-4 md:p-6 lg:p-8 text-white flex flex-col justify-center min-h-[200px] md:min-h-[250px] lg:h-[400px]">
-            <h3 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-2">80%</h3>
+            <h3 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-2">
+              80%
+            </h3>
             <h4 className="text-sm md:text-lg lg:text-xl font-semibold mb-3 md:mb-4">
               ENHANCED BRAND VISIBILITY
             </h4>
