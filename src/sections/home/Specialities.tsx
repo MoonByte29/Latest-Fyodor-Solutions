@@ -6,7 +6,7 @@ const Specialities = () => {
     <section className="py-8 md:py-12 px-4 md:px-6 lg:px-12">
       <div className="max-w-6xl md:mx-auto sm:mx-5">
         {/* Header - Made responsive */}
-        <div className="flex flex-col md:items-start sm:items-center mb-8 md:mb-16">
+        <div className="flex flex-col md:items-start mb-8 md:mb-16">
           <div className="min-w-fit border border-white/30 rounded-full px-4 py-2 backdrop-blur-sm bg-white/10 flex items-center gap-2 mb-4 md:mb-6">
             <span className="h-2 w-2 animate-pulse bg-violet-500 rounded-full"></span>
             <span className="text-white text-xs md:text-sm font-medium tracking-wider">
