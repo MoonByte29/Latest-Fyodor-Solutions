@@ -21,7 +21,6 @@ const Home = () => {
         <div className="lg:relative lg:block hidden">
           <PartnerSection />
         </div>
-        {/* <ChromaBackground /> */}
         <FeatureSection/>
         <Specialities />
         <BlogSection />
