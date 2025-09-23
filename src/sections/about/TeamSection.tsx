@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../../components/Card";
 import Akash from "../../assets/Akash Singhal.png";
 import Utkarsh from "../../assets/Utkarsh.png";
+import StackCards from "../../components/StackCards";
 
 const teamMembers = [
   {

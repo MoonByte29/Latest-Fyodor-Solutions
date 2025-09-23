@@ -3,7 +3,6 @@ import { cn } from "../lib/utils";
 
 interface CardProps {
   name: string;
-  title: string;
   avatarUrl:string;
   desc:string;
   className?: string;
@@ -11,7 +10,6 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({
   name,
-  title,
   avatarUrl,
   desc,
   className,
